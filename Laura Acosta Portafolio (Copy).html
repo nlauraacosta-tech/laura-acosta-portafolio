@@ -1,0 +1,773 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Laura Acosta Portafolio (Copy)</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,500&family=Open+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: dark navy brand world. Full-screen parallax hero, light "paper" profile band,
+   a sticky 3D cylinder for the three pillars, a sticky horizontal 3D track for the process,
+   a tilt-in timeline, and a navy contact close with the brand's footer band. */
+:root{
+  color-scheme: dark;
+  /* brand kit */
+  --black:#000000; --navy:#1c2e4a; --slate:#5b6770; --mist:#f5f7fa; --teal:#2ca6a4;
+  --navy-deep:#0a1f44; --teal-bright:#1ba6a6; --silver:#e5e5e5; --amber:#f5a623; --white:#ffffff;
+  /* roles */
+  --bg: var(--navy-deep); --fg: var(--mist); --muted: #b9c3cf; --line: rgba(245,247,250,.14);
+  --accent: var(--teal); --signal: var(--amber); --paper: var(--mist); --paper-ink: var(--navy);
+  --paper-muted: var(--slate); --paper-accent:#1a7a78;
+  --display: "Montserrat","Segoe UI",system-ui,sans-serif;
+  --text: "Open Sans","Segoe UI",system-ui,sans-serif;
+  --r-sm:4px; --r-md:10px; --r-lg:20px;
+  --gut: max(16px, env(safe-area-inset-left, 0px));
+  --gutR: max(16px, env(safe-area-inset-right, 0px));
+  --ease: cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--text);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-deep)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal-bright);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gutR)}
+.eyebrow{font-family:var(--text);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+
+/* progress */
+.progress{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--signal);z-index:70}
+
+/* nav */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(10,31,68,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;letter-spacing:.02em}
+.mark b{display:grid;place-items:center;width:36px;height:36px;border-radius:var(--r-md);background:linear-gradient(135deg,var(--navy),var(--teal));font-size:14px;border:1px solid var(--line)}
+.mark span{font-size:15px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;font-size:14px;color:var(--muted);position:relative;padding-block:4px;transition:color .25s}
+.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.links a:hover,.links a.on{color:var(--white)}
+.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+.navR{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:rgba(28,46,74,.5)}
+.lang button{all:unset;cursor:pointer;font:600 12px/1 var(--text);letter-spacing:.08em;padding:7px 11px;border-radius:999px;color:var(--muted);transition:background .3s,color .3s}
+.lang button[aria-pressed="true"]{background:var(--teal);color:var(--navy-deep)}
+.lang button:focus-visible{outline:2px solid var(--teal-bright)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 15px/1 var(--text);padding:15px 22px;border-radius:var(--r-md);border:1px solid transparent;cursor:pointer;transition:transform .3s var(--ease),background .3s,border-color .3s,box-shadow .3s}
+.btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-signal{background:var(--signal);color:var(--navy-deep);box-shadow:0 10px 30px -12px rgba(245,166,35,.7)}
+.btn-signal:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(245,247,250,.3);color:var(--white);background:rgba(10,31,68,.25)}
+.btn-ghost:hover{border-color:var(--teal);background:rgba(44,166,164,.12)}
+.btn-sm{padding:10px 14px;font-size:13px}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;perspective:1200px}
+.layer{position:absolute;inset:-12%;will-change:transform;pointer-events:none}
+.l-grad{background:
+  radial-gradient(60% 70% at 85% 30%, rgba(27,166,166,.55), transparent 70%),
+  radial-gradient(50% 60% at 10% 90%, rgba(28,46,74,.9), transparent 70%),
+  linear-gradient(115deg, var(--navy-deep) 0%, #0d2f52 45%, #13605f 80%, var(--teal) 110%)}
+.l-grid{background-image:
+  linear-gradient(rgba(245,247,250,.07) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(245,247,250,.07) 1px, transparent 1px),
+  linear-gradient(rgba(245,247,250,.035) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(245,247,250,.035) 1px, transparent 1px);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px;
+  -webkit-mask-image:radial-gradient(80% 80% at 60% 45%, #000 30%, transparent 85%);
+          mask-image:radial-gradient(80% 80% at 60% 45%, #000 30%, transparent 85%)}
+.l-net{inset:0;width:100%;height:100%}
+.l-shapes svg{position:absolute;stroke:var(--teal);fill:none;stroke-width:1.2;opacity:.5}
+.l-shapes .s1{width:180px;right:14%;top:22%;animation:spin 40s linear infinite}
+.l-shapes .s2{width:90px;right:34%;top:68%;stroke:var(--amber);opacity:.55;animation:spin 28s linear infinite reverse}
+.l-shapes .s3{width:120px;left:6%;top:16%;opacity:.25;animation:spin 50s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hero-inner{position:relative;z-index:2;padding-block:120px 140px;will-change:transform,opacity;transform-origin:50% 100%}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;max-width:760px;margin-left:auto;margin-right:6%}
+.hero .eyebrow{color:var(--silver);opacity:.85}
+.name{font-weight:800;font-size:clamp(48px,9vw,104px);line-height:.95;letter-spacing:-.02em;color:var(--white)}
+.name .ch{display:inline-block;transform:translateY(110%) rotateX(-80deg);opacity:0;transform-origin:50% 100%;animation:rise .9s var(--ease) forwards;animation-delay:calc(var(--i)*45ms + 250ms)}
+.name .w{display:inline-block;overflow:hidden;padding-bottom:.08em;vertical-align:bottom}
+@keyframes rise{to{transform:none;opacity:1}}
+.role{font-family:var(--text);font-weight:600;font-size:clamp(17px,2.1vw,24px);color:var(--white);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.role .sep{color:var(--teal);font-weight:400}
+.fade-up{opacity:0;transform:translateY(18px);animation:fu .9s var(--ease) forwards;animation-delay:var(--d,0ms)}
+@keyframes fu{to{opacity:1;transform:none}}
+.tagline{position:relative;display:inline-block;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(22px,3vw,34px);color:var(--white);padding-bottom:14px;justify-self:start}
+.tagline .clip{display:inline-block;clip-path:inset(0 100% 0 0);animation:wipe 1.1s var(--ease) 1.1s forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.tagline::after{content:"";position:absolute;left:0;bottom:0;height:5px;width:100%;background:var(--signal);border-radius:2px;transform:scaleX(0);transform-origin:left;animation:draw .9s var(--ease) 1.9s forwards}
+@keyframes draw{to{transform:scaleX(1)}}
+.pillars{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pillars li{display:flex;align-items:center;gap:14px;font-size:clamp(16px,1.7vw,19px);color:var(--white)}
+.pillars svg{width:20px;height:20px;stroke:var(--silver);fill:none;stroke-width:1.5;flex:none}
+.typed{border-right:2px solid transparent}
+.typed.cursor{border-color:var(--teal);animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{border-color:transparent}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.band{position:absolute;left:0;right:0;bottom:0;z-index:3;background:rgba(10,31,68,.92);border-top:1px solid var(--line)}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.band p{font-style:italic;color:var(--silver);font-size:clamp(13px,1.4vw,17px);text-align:right;margin-left:auto}
+.cue{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;flex:none}
+.cue i{width:22px;height:34px;border:1.5px solid var(--muted);border-radius:12px;position:relative}
+.cue i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--amber);animation:cue 1.8s var(--ease) infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(11px);opacity:0}100%{opacity:0}}
+
+/* ===== shared section ===== */
+section{position:relative}
+.sec{padding-block:120px}
+.sec-head{display:grid;gap:14px;margin-bottom:56px;max-width:760px}
+.h2{font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.015em}
+.split .ch{display:inline-block;opacity:.12;transform:translateY(.5em) rotateX(-60deg);transform-origin:50% 100%;transition:opacity .7s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i)*22ms)}
+.split .w{display:inline-block;white-space:nowrap}
+.split.in .ch{opacity:1;transform:none}
+.r3d{transform-origin:50% 0;will-change:transform}
+
+/* ===== PROFILE (paper) ===== */
+.paper{background:var(--paper);color:var(--paper-ink)}
+.paper .eyebrow{color:var(--paper-accent)}
+.profile{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:64px;align-items:start}
+.manifesto{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.2vw,38px);line-height:1.3;letter-spacing:-.01em}
+.manifesto .wd{opacity:.18;transition:opacity .35s}
+.manifesto .wd.lit{opacity:1}
+.manifesto .wd.em{color:var(--paper-accent)}
+.facts{display:grid;gap:0;border-top:1px solid var(--silver)}
+.fact{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding-block:18px;border-bottom:1px solid var(--silver)}
+.fact dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-muted);font-weight:600;padding-top:3px}
+.fact dd{margin:0;font-weight:600;color:var(--paper-ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-size:13px;font-weight:600;padding:7px 12px;border-radius:var(--r-sm);background:var(--white);border:1px solid var(--silver);color:var(--paper-ink);transition:transform .3s var(--ease),border-color .3s}
+.chip:hover{transform:translateY(-3px);border-color:var(--paper-accent)}
+
+/* ===== APPROACH: sticky 3D cylinder ===== */
+.approach{height:340vh;background:linear-gradient(180deg,var(--navy-deep),#0c2649 60%,var(--navy-deep))}
+.stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.approach .stick::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(245,247,250,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(245,247,250,.05) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(60% 60% at 70% 50%,#000,transparent);mask-image:radial-gradient(60% 60% at 70% 50%,#000,transparent)}
+.ap-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;align-items:center}
+.ap-copy{display:grid;gap:22px}
+.ap-steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}
+.ap-steps li{display:flex;align-items:center;gap:14px;font-family:var(--display);font-weight:600;font-size:17px;color:var(--muted);padding:10px 0;transition:color .4s}
+.ap-steps li::before{content:"";width:28px;height:2px;background:var(--line);transition:background .4s,width .4s var(--ease)}
+.ap-steps li.on{color:var(--white)}
+.ap-steps li.on::before{background:var(--amber);width:48px}
+.stage{position:relative;height:min(460px,62svh);perspective:1400px;display:grid;place-items:center}
+.ring{position:relative;width:var(--cw);height:100%;transform-style:preserve-3d}
+.card3d{position:absolute;inset:0;border-radius:var(--r-lg);padding:34px;display:flex;flex-direction:column;gap:18px;
+  background:linear-gradient(160deg,rgba(28,46,74,.96),rgba(10,31,68,.96));border:1px solid rgba(44,166,164,.35);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.06);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.card3d .ic{width:56px;height:56px;border-radius:var(--r-md);display:grid;place-items:center;background:rgba(44,166,164,.14);border:1px solid rgba(44,166,164,.4)}
+.card3d .ic svg{width:28px;height:28px;stroke:var(--teal);fill:none;stroke-width:1.5}
+.card3d h3{font-size:clamp(22px,2.4vw,28px);font-weight:700;color:var(--white);line-height:1.15}
+.card3d p{color:var(--silver);font-size:16px}
+.card3d .tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
+.card3d .tags span{font-size:12px;font-weight:600;letter-spacing:.06em;padding:6px 10px;border-radius:var(--r-sm);border:1px solid var(--line);color:var(--muted)}
+.card3d .num{position:absolute;right:28px;top:22px;font-family:var(--display);font-weight:800;font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(44,166,164,.35)}
+
+/* ===== PROCESS: sticky horizontal 3D track ===== */
+.process{background:var(--navy-deep)}
+.process .stick{justify-content:center;gap:40px}
+.track{display:flex;gap:28px;padding-left:max(var(--gut), calc((100vw - 1180px)/2 + 16px));padding-right:20vw;will-change:transform;perspective:1200px}
+.step{flex:none;width:min(380px,78vw);min-height:300px;border-radius:var(--r-lg);padding:32px;display:flex;flex-direction:column;gap:16px;
+  background:var(--navy);border:1px solid var(--line);transform-style:preserve-3d;will-change:transform;position:relative;overflow:hidden}
+.step::after{content:"";position:absolute;inset:auto -40% -60% auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(27,166,166,.35),transparent 70%)}
+.step .idx{font-family:var(--display);font-weight:800;font-size:15px;color:var(--amber);letter-spacing:.1em}
+.step h3{font-size:26px;font-weight:700;color:var(--white)}
+.step p{color:var(--silver)}
+.step .bar{margin-top:auto;height:4px;border-radius:2px;background:rgba(245,247,250,.1);overflow:hidden}
+.step .bar i{display:block;height:100%;width:calc(var(--n)*20%);background:linear-gradient(90deg,var(--teal),var(--teal-bright))}
+.process-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.process-head .sec-head{margin-bottom:0}
+.counter{font-family:var(--display);font-weight:700;font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums}
+.counter b{color:var(--white);font-size:28px}
+
+/* ===== EXPERIENCE ===== */
+.exp{background:linear-gradient(180deg,var(--navy-deep),var(--navy))}
+.note{font-size:13px;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r-sm);padding:8px 12px;justify-self:start}
+.timeline{position:relative;display:grid;gap:28px;padding-left:44px}
+.timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline .fill{position:absolute;left:11px;top:6px;width:2px;height:calc(var(--tp,0)*100%);max-height:calc(100% - 12px);background:linear-gradient(var(--teal),var(--amber))}
+.job{position:relative;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;padding:30px;border-radius:var(--r-lg);background:rgba(28,46,74,.65);border:1px solid var(--line)}
+.job::before{content:"";position:absolute;left:-40px;top:36px;width:16px;height:16px;border-radius:50%;background:var(--navy-deep);border:2px solid var(--teal)}
+.job .when{font-family:var(--display);font-weight:600;color:var(--teal);font-size:15px}
+.job .org{color:var(--muted);font-size:14px;margin-top:4px}
+.job h3{font-size:22px;color:var(--white);margin-bottom:10px}
+.job ul{margin:0;padding-left:18px;color:var(--silver);display:grid;gap:6px}
+.job li::marker{color:var(--teal)}
+
+/* ===== SKILLS marquee ===== */
+.marq{padding-block:72px;background:var(--navy);border-block:1px solid var(--line);overflow:hidden;display:grid;gap:18px}
+.row{display:flex;width:max-content;gap:0;animation:marq 38s linear infinite}
+.row.rev{animation-direction:reverse;animation-duration:46s}
+.row span{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.4vw,56px);white-space:nowrap;padding-right:42px;color:transparent;-webkit-text-stroke:1px rgba(245,247,250,.35);transition:color .3s}
+.row span:nth-child(3n+1){color:var(--white);-webkit-text-stroke:0}
+.row span:nth-child(5n+3){color:var(--teal);-webkit-text-stroke:0}
+.row span::after{content:"◆";font-size:.35em;vertical-align:middle;margin-left:42px;color:var(--amber);-webkit-text-stroke:0}
+.marq:hover .row{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ===== CONTACT ===== */
+.contact{position:relative;overflow:hidden;background:var(--navy-deep)}
+.contact .glow{position:absolute;width:900px;height:900px;right:-300px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(44,166,164,.35),transparent 65%);pointer-events:none}
+.ct{position:relative;display:grid;gap:30px;max-width:900px}
+.big{font-weight:800;font-size:clamp(38px,7vw,88px);line-height:1;letter-spacing:-.02em}
+.big .hl{background:linear-gradient(90deg,var(--teal),var(--teal-bright),var(--amber),var(--teal));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 8s linear infinite}
+@keyframes sheen{to{background-position:300% 0}}
+.ct-lead{color:var(--silver);font-size:18px;max-width:60ch}
+.ct-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.addr{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(28,46,74,.6)}
+.addr code{font-family:var(--text);font-size:15px;color:var(--white);user-select:all;word-break:break-all}
+.toast{font-size:13px;color:var(--teal);min-height:20px}
+footer{background:var(--black);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;font-size:13px;color:var(--muted)}
+footer em{color:var(--silver)}
+
+/* ===== responsive ===== */
+@media (max-width: 900px){
+  .links{display:none}
+  .hero-grid{margin-right:0}
+  .profile,.ap-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .ap-copy .ap-steps{display:none}
+  .stage{height:min(420px,52svh)}
+  .job{grid-template-columns:minmax(0,1fr);gap:10px}
+  .sec{padding-block:88px}
+}
+@media (max-width: 520px){
+  .mark span{display:none}
+  .role .sep{display:none}
+  .role{flex-direction:column;align-items:flex-start}
+  .band p{font-size:12px}
+  .cue{display:none}
+  .card3d{padding:26px}
+  .timeline{padding-left:30px}
+  .timeline::before,.timeline .fill{left:6px}
+  .job::before{left:-31px}
+  .job{padding:22px}
+}
+
+/* ===== reduced motion ===== */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .name .ch,.fade-up{opacity:1;transform:none}
+  .tagline .clip{clip-path:none}
+  .tagline::after{transform:none}
+  .split .ch{opacity:1;transform:none}
+  .manifesto .wd{opacity:1}
+  .row{animation:none}
+}
+html.rm .approach,html.rm .process{height:auto}
+html.rm .stick{position:relative;height:auto;padding-block:96px}
+html.rm .stage{height:auto;perspective:none}
+html.rm .ring{width:100%;height:auto;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+html.rm .card3d{position:relative;inset:auto}
+html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
+</style>
+
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="mark" href="#inicio" aria-label="Laura Acosta, inicio"><b>LA</b><span>Laura Acosta</span></a>
+    <ul class="links">
+      <li><a href="#perfil" data-i18n="nav.profile">Perfil</a></li>
+      <li><a href="#enfoque" data-i18n="nav.approach">Enfoque</a></li>
+      <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
+      <li><a href="#trayectoria" data-i18n="nav.exp">Trayectoria</a></li>
+      <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="navR">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="lang-es" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="layer l-grad" data-speed="0.12" data-depth="8"></div>
+  <div class="layer l-grid" data-speed="0.28" data-depth="18"></div>
+  <canvas class="layer l-net" data-speed="0.45" data-depth="28" aria-hidden="true"></canvas>
+  <div class="layer l-shapes" data-speed="0.7" data-depth="44" aria-hidden="true">
+    <svg class="s1" viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/><polygon points="50,22 74,36 74,64 50,78 26,64 26,36"/><path d="M50 4v18M90 27 74 36M90 73 74 64M50 96V78M10 73l16-9M10 27l16 9"/></svg>
+    <svg class="s2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="26"/><path d="M50 6v16M50 78v16M6 50h16M78 50h16"/></svg>
+    <svg class="s3" viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72" rx="6"/><path d="M14 50h72M50 14v72"/></svg>
+  </div>
+
+  <div class="hero-inner wrap">
+    <div class="hero-grid">
+      <p class="eyebrow fade-up" style="--d:100ms" data-i18n="hero.eyebrow">Ingeniería comercial · Ventas técnicas B2B</p>
+      <h1 class="name" data-split-hero>Laura Acosta</h1>
+      <p class="role fade-up" style="--d:800ms"><span data-i18n="hero.role">Ingeniera Comercial y de Ventas Técnicas</span><span class="sep">|</span><span data-i18n="hero.bi">Bilingüe (EN/ES)</span></p>
+      <p class="tagline"><span class="clip" data-i18n="hero.tag">Desempeño comercial, con ingeniería.</span></p>
+      <ul class="pillars" aria-label="Pilares">
+        <li class="fade-up" style="--d:2200ms"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span class="typed" data-i18n="p1">Asegurar el cumplimiento.</span></li>
+        <li class="fade-up" style="--d:2400ms"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span class="typed" data-i18n="p2">Diferenciar el valor.</span></li>
+        <li class="fade-up" style="--d:2600ms"><svg viewBox="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><path d="M12 2v20M3 7l18 10M21 7 3 17"/></svg><span class="typed" data-i18n="p3">Alinear el desempeño.</span></li>
+      </ul>
+      <div class="cta fade-up" style="--d:2900ms">
+        <a class="btn btn-signal" href="#contacto"><span data-i18n="cta.talk">Hablemos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#enfoque" data-i18n="cta.see">Ver mi enfoque</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <a class="cue" href="#perfil"><i></i><span data-i18n="hero.scroll">Desliza</span></a>
+      <p data-i18n="hero.band">Conectando la precisión técnica con resultados comerciales estratégicos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROFILE ===== -->
+<section class="paper sec" id="perfil">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="pr.eye">Perfil</p>
+      <h2 class="h2 split" data-i18n="pr.title">Entre la ingeniería y el cierre.</h2>
+    </div>
+    <div class="profile">
+      <p class="manifesto" id="manifesto" data-i18n="pr.body">Traduzco requisitos técnicos en decisiones de compra. Trabajo entre ingeniería, clientes y dirección comercial para que cada propuesta *cumpla* la norma, muestre su *valor* con claridad y se sostenga en *resultados* medibles.</p>
+      <div class="r3d">
+        <dl class="facts">
+          <div class="fact"><dt data-i18n="f.role.k">Rol</dt><dd data-i18n="f.role.v">Ventas técnicas e ingeniería comercial</dd></div>
+          <div class="fact"><dt data-i18n="f.lang.k">Idiomas</dt><dd data-i18n="f.lang.v">Español · Inglés, nivel profesional</dd></div>
+          <div class="fact"><dt data-i18n="f.focus.k">Enfoque</dt><dd data-i18n="f.focus.v">Cumplimiento, valor y desempeño</dd></div>
+          <div class="fact"><dt data-i18n="f.mkt.k">Mercado</dt><dd data-i18n="f.mkt.v">B2B técnico e industrial</dd></div>
+        </dl>
+        <div class="chips" id="chips"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPROACH (3D cylinder) ===== -->
+<section class="approach" id="enfoque">
+  <div class="stick">
+    <div class="wrap ap-grid">
+      <div class="ap-copy">
+        <p class="eyebrow" data-i18n="ap.eye">Enfoque</p>
+        <h2 class="h2 split" data-i18n="ap.title">Tres pilares, un mismo resultado.</h2>
+        <p style="color:var(--silver);max-width:46ch" data-i18n="ap.lead">Cada oportunidad pasa por los mismos tres filtros antes de llegar al cliente.</p>
+        <ol class="ap-steps" id="apSteps">
+          <li class="on" data-i18n="c1.t">Asegurar el cumplimiento</li>
+          <li data-i18n="c2.t">Diferenciar el valor</li>
+          <li data-i18n="c3.t">Alinear el desempeño</li>
+        </ol>
+      </div>
+      <div class="stage">
+        <div class="ring" id="ring">
+          <article class="card3d">
+            <span class="num" aria-hidden="true">01</span>
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
+            <h3 data-i18n="c1.t">Asegurar el cumplimiento</h3>
+            <p data-i18n="c1.d">Reviso especificaciones, normas y certificaciones antes de cotizar, para que la propuesta pase la auditoría del cliente a la primera.</p>
+            <div class="tags"><span data-i18n="c1.a">Normas</span><span data-i18n="c1.b">Especificaciones</span><span data-i18n="c1.c">Documentación</span></div>
+          </article>
+          <article class="card3d">
+            <span class="num" aria-hidden="true">02</span>
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div>
+            <h3 data-i18n="c2.t">Diferenciar el valor</h3>
+            <p data-i18n="c2.d">Convierto datos de desempeño en argumentos de negocio: costo total, riesgo evitado y retorno, en el lenguaje de cada decisor.</p>
+            <div class="tags"><span>TCO</span><span>ROI</span><span>Benchmarking</span></div>
+          </article>
+          <article class="card3d">
+            <span class="num" aria-hidden="true">03</span>
+            <div class="ic"><svg viewBox="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><path d="M12 2v20M3 7l18 10M21 7 3 17"/></svg></div>
+            <h3 data-i18n="c3.t">Alinear el desempeño</h3>
+            <p data-i18n="c3.d">Conecto lo que se promete en ventas con lo que entrega operación, con métricas compartidas y seguimiento después del cierre.</p>
+            <div class="tags"><span>KPIs</span><span data-i18n="c3.b">Postventa</span><span data-i18n="c3.c">Mejora continua</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS (horizontal 3D) ===== -->
+<section class="process" id="proceso">
+  <div class="stick">
+    <div class="wrap process-head">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="ps.eye">Proceso</p>
+        <h2 class="h2 split" data-i18n="ps.title">De la necesidad técnica al resultado medido.</h2>
+      </div>
+      <p class="counter" aria-hidden="true"><b id="cnt">01</b> / 05</p>
+    </div>
+    <div class="track" id="track">
+      <article class="step" style="--n:1"><span class="idx">01</span><h3 data-i18n="s1.t">Diagnóstico</h3><p data-i18n="s1.d">Entiendo la aplicación, el proceso del cliente y los criterios reales de compra.</p><div class="bar"><i></i></div></article>
+      <article class="step" style="--n:2"><span class="idx">02</span><h3 data-i18n="s2.t">Especificación</h3><p data-i18n="s2.d">Traduzco necesidades en requisitos técnicos verificables y en las normas que aplican.</p><div class="bar"><i></i></div></article>
+      <article class="step" style="--n:3"><span class="idx">03</span><h3 data-i18n="s3.t">Propuesta de valor</h3><p data-i18n="s3.d">Construyo la solución y el caso económico para ingeniería, compras y dirección.</p><div class="bar"><i></i></div></article>
+      <article class="step" style="--n:4"><span class="idx">04</span><h3 data-i18n="s4.t">Negociación</h3><p data-i18n="s4.d">Cierro con condiciones claras de alcance, plazos y desempeño comprometido.</p><div class="bar"><i></i></div></article>
+      <article class="step" style="--n:5"><span class="idx">05</span><h3 data-i18n="s5.t">Seguimiento</h3><p data-i18n="s5.d">Mido los resultados contra lo prometido y detecto la siguiente oportunidad.</p><div class="bar"><i></i></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="exp sec" id="trayectoria">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="ex.eye">Trayectoria</p>
+      <h2 class="h2 split" data-i18n="ex.title">Experiencia que respalda cada propuesta.</h2>
+      <p class="note" data-i18n="ex.note">Contenido de ejemplo: reemplaza empresas, fechas y logros con tu trayectoria real.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <span class="fill" aria-hidden="true"></span>
+      <article class="job r3d">
+        <div><p class="when" data-i18n="j1.w">20XX – Actual</p><p class="org" data-i18n="j1.o">Empresa · Ciudad</p></div>
+        <div><h3 data-i18n="j1.t">Ingeniera Comercial · Ventas Técnicas</h3>
+          <ul><li data-i18n="j1.a">Gestión de cuentas industriales clave desde el diagnóstico hasta la postventa.</li><li data-i18n="j1.b">Propuestas técnico‑económicas alineadas a normas y requisitos del cliente.</li><li data-i18n="j1.c">Coordinación entre ingeniería, operación y dirección comercial.</li></ul></div>
+      </article>
+      <article class="job r3d">
+        <div><p class="when" data-i18n="j2.w">20XX – 20XX</p><p class="org" data-i18n="j2.o">Empresa · Ciudad</p></div>
+        <div><h3 data-i18n="j2.t">Ingeniera de Aplicaciones · Preventa</h3>
+          <ul><li data-i18n="j2.a">Selección y dimensionamiento de soluciones según la aplicación del cliente.</li><li data-i18n="j2.b">Demostraciones técnicas y presentaciones ejecutivas en inglés y español.</li></ul></div>
+      </article>
+      <article class="job r3d">
+        <div><p class="when" data-i18n="j3.w">20XX – 20XX</p><p class="org" data-i18n="j3.o">Universidad · Ciudad</p></div>
+        <div><h3 data-i18n="j3.t">Formación en Ingeniería</h3>
+          <ul><li data-i18n="j3.a">Base técnica para leer especificaciones, normas y datos de desempeño.</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="marq" aria-label="Competencias">
+  <div class="row" id="row1"></div>
+  <div class="row rev" id="row2"></div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact sec" id="contacto">
+  <span class="glow" aria-hidden="true"></span>
+  <div class="wrap ct">
+    <p class="eyebrow" data-i18n="ct.eye">Contacto</p>
+    <h2 class="big"><span class="split" data-i18n="ct.t1">¿Diseñamos tu siguiente</span> <span class="hl" data-i18n="ct.t2">resultado comercial?</span></h2>
+    <p class="ct-lead" data-i18n="ct.lead">Disponible para roles de ventas técnicas, ingeniería comercial y gestión de cuentas en mercados de habla inglesa e hispana.</p>
+    <div class="ct-row">
+      <div class="addr"><code id="email">tu.correo@ejemplo.com</code><button class="btn btn-signal btn-sm" type="button" id="copy" data-i18n="ct.copy">Copiar correo</button></div>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    </div>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Laura Acosta</span>
+    <em data-i18n="ft">Desempeño comercial, con ingeniería.</em>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (RM) document.documentElement.classList.add('rm');
+
+  /* ---------- i18n ---------- */
+  const T = {
+    es: {
+      'nav.profile':'Perfil','nav.approach':'Enfoque','nav.process':'Proceso','nav.exp':'Trayectoria','nav.contact':'Contacto',
+      'hero.eyebrow':'Ingeniería comercial · Ventas técnicas B2B','hero.role':'Ingeniera Comercial y de Ventas Técnicas','hero.bi':'Bilingüe (EN/ES)',
+      'hero.tag':'Desempeño comercial, con ingeniería.','p1':'Asegurar el cumplimiento.','p2':'Diferenciar el valor.','p3':'Alinear el desempeño.',
+      'cta.talk':'Hablemos','cta.see':'Ver mi enfoque','hero.scroll':'Desliza','hero.band':'Conectando la precisión técnica con resultados comerciales estratégicos.',
+      'pr.eye':'Perfil','pr.title':'Entre la ingeniería y el cierre.',
+      'pr.body':'Traduzco requisitos técnicos en decisiones de compra. Trabajo entre ingeniería, clientes y dirección comercial para que cada propuesta *cumpla* la norma, muestre su *valor* con claridad y se sostenga en *resultados* medibles.',
+      'f.role.k':'Rol','f.role.v':'Ventas técnicas e ingeniería comercial','f.lang.k':'Idiomas','f.lang.v':'Español · Inglés, nivel profesional',
+      'f.focus.k':'Enfoque','f.focus.v':'Cumplimiento, valor y desempeño','f.mkt.k':'Mercado','f.mkt.v':'B2B técnico e industrial',
+      chips:['Especificación técnica','Cumplimiento normativo','Propuestas de valor','Negociación','Preventa','CRM y pronóstico','Presentaciones ejecutivas'],
+      'ap.eye':'Enfoque','ap.title':'Tres pilares, un mismo resultado.','ap.lead':'Cada oportunidad pasa por los mismos tres filtros antes de llegar al cliente.',
+      'c1.t':'Asegurar el cumplimiento','c1.d':'Reviso especificaciones, normas y certificaciones antes de cotizar, para que la propuesta pase la auditoría del cliente a la primera.','c1.a':'Normas','c1.b':'Especificaciones','c1.c':'Documentación',
+      'c2.t':'Diferenciar el valor','c2.d':'Convierto datos de desempeño en argumentos de negocio: costo total, riesgo evitado y retorno, en el lenguaje de cada decisor.',
+      'c3.t':'Alinear el desempeño','c3.d':'Conecto lo que se promete en ventas con lo que entrega operación, con métricas compartidas y seguimiento después del cierre.','c3.b':'Postventa','c3.c':'Mejora continua',
+      'ps.eye':'Proceso','ps.title':'De la necesidad técnica al resultado medido.',
+      's1.t':'Diagnóstico','s1.d':'Entiendo la aplicación, el proceso del cliente y los criterios reales de compra.',
+      's2.t':'Especificación','s2.d':'Traduzco necesidades en requisitos técnicos verificables y en las normas que aplican.',
+      's3.t':'Propuesta de valor','s3.d':'Construyo la solución y el caso económico para ingeniería, compras y dirección.',
+      's4.t':'Negociación','s4.d':'Cierro con condiciones claras de alcance, plazos y desempeño comprometido.',
+      's5.t':'Seguimiento','s5.d':'Mido los resultados contra lo prometido y detecto la siguiente oportunidad.',
+      'ex.eye':'Trayectoria','ex.title':'Experiencia que respalda cada propuesta.','ex.note':'Contenido de ejemplo: reemplaza empresas, fechas y logros con tu trayectoria real.',
+      'j1.w':'20XX – Actual','j1.o':'Empresa · Ciudad','j1.t':'Ingeniera Comercial · Ventas Técnicas','j1.a':'Gestión de cuentas industriales clave desde el diagnóstico hasta la postventa.','j1.b':'Propuestas técnico‑económicas alineadas a normas y requisitos del cliente.','j1.c':'Coordinación entre ingeniería, operación y dirección comercial.',
+      'j2.w':'20XX – 20XX','j2.o':'Empresa · Ciudad','j2.t':'Ingeniera de Aplicaciones · Preventa','j2.a':'Selección y dimensionamiento de soluciones según la aplicación del cliente.','j2.b':'Demostraciones técnicas y presentaciones ejecutivas en inglés y español.',
+      'j3.w':'20XX – 20XX','j3.o':'Universidad · Ciudad','j3.t':'Formación en Ingeniería','j3.a':'Base técnica para leer especificaciones, normas y datos de desempeño.',
+      skills:['Ventas técnicas B2B','Ingeniería de aplicaciones','Cumplimiento normativo','Costo total de propiedad','Gestión de cuentas clave','Preventa','Negociación','Bilingüe EN/ES'],
+      'ct.eye':'Contacto','ct.t1':'¿Diseñamos tu siguiente','ct.t2':'resultado comercial?',
+      'ct.lead':'Disponible para roles de ventas técnicas, ingeniería comercial y gestión de cuentas en mercados de habla inglesa e hispana.',
+      'ct.copy':'Copiar correo','copied':'Correo copiado.','copyFail':'No se pudo copiar. El correo quedó seleccionado: cópialo con Ctrl+C.',
+      'ft':'Desempeño comercial, con ingeniería.'
+    },
+    en: {
+      'nav.profile':'Profile','nav.approach':'Approach','nav.process':'Process','nav.exp':'Experience','nav.contact':'Contact',
+      'hero.eyebrow':'Commercial engineering · B2B technical sales','hero.role':'Technical Sales & Commercial Engineer','hero.bi':'Bilingual (EN/ES)',
+      'hero.tag':'Commercial performance, engineered.','p1':'Ensure compliance.','p2':'Differentiate value.','p3':'Align performance.',
+      'cta.talk':"Let's talk",'cta.see':'See my approach','hero.scroll':'Scroll','hero.band':'Connecting technical precision with strategic commercial outcomes.',
+      'pr.eye':'Profile','pr.title':'Between engineering and the close.',
+      'pr.body':'I translate technical requirements into buying decisions. I work between engineering, customers and commercial leadership so every proposal *meets* the standard, shows its *value* clearly and holds up in measurable *results*.',
+      'f.role.k':'Role','f.role.v':'Technical sales and commercial engineering','f.lang.k':'Languages','f.lang.v':'Spanish · English, professional level',
+      'f.focus.k':'Focus','f.focus.v':'Compliance, value and performance','f.mkt.k':'Market','f.mkt.v':'Technical and industrial B2B',
+      chips:['Technical specification','Regulatory compliance','Value propositions','Negotiation','Pre-sales','CRM & forecasting','Executive presentations'],
+      'ap.eye':'Approach','ap.title':'Three pillars, one outcome.','ap.lead':'Every opportunity goes through the same three filters before it reaches the customer.',
+      'c1.t':'Ensure compliance','c1.d':"I review specifications, standards and certifications before quoting, so the proposal passes the customer's audit the first time.",'c1.a':'Standards','c1.b':'Specifications','c1.c':'Documentation',
+      'c2.t':'Differentiate value','c2.d':"I turn performance data into business arguments: total cost, risk avoided and return, in each decision-maker's language.",
+      'c3.t':'Align performance','c3.d':'I connect what sales promises with what operations delivers, through shared metrics and follow-up after the close.','c3.b':'After-sales','c3.c':'Continuous improvement',
+      'ps.eye':'Process','ps.title':'From technical need to measured result.',
+      's1.t':'Discovery','s1.d':"I learn the application, the customer's process and the real buying criteria.",
+      's2.t':'Specification','s2.d':'I translate needs into verifiable technical requirements and the standards that apply.',
+      's3.t':'Value case','s3.d':'I build the solution and the business case for engineering, procurement and leadership.',
+      's4.t':'Negotiation','s4.d':'I close with clear terms on scope, timelines and committed performance.',
+      's5.t':'Follow-through','s5.d':'I measure results against what was promised and spot the next opportunity.',
+      'ex.eye':'Experience','ex.title':'Experience behind every proposal.','ex.note':'Sample content: replace companies, dates and achievements with your real history.',
+      'j1.w':'20XX – Present','j1.o':'Company · City','j1.t':'Commercial Engineer · Technical Sales','j1.a':'Managed key industrial accounts from discovery through after-sales.','j1.b':'Built technical and commercial proposals aligned with standards and customer requirements.','j1.c':'Coordinated engineering, operations and commercial leadership.',
+      'j2.w':'20XX – 20XX','j2.o':'Company · City','j2.t':'Applications Engineer · Pre-sales','j2.a':'Selected and sized solutions for each customer application.','j2.b':'Delivered technical demos and executive presentations in English and Spanish.',
+      'j3.w':'20XX – 20XX','j3.o':'University · City','j3.t':'Engineering degree','j3.a':'Technical grounding to read specifications, standards and performance data.',
+      skills:['B2B technical sales','Applications engineering','Regulatory compliance','Total cost of ownership','Key account management','Pre-sales','Negotiation','Bilingual EN/ES'],
+      'ct.eye':'Contact','ct.t1':'Shall we engineer your next','ct.t2':'commercial result?',
+      'ct.lead':'Open to technical sales, commercial engineering and account management roles in English- and Spanish-speaking markets.',
+      'ct.copy':'Copy email','copied':'Email copied.','copyFail':'Copy was blocked. The address is selected: press Ctrl+C.',
+      'ft':'Commercial performance, engineered.'
+    }
+  };
+  let lang = 'es';
+  try { const s = localStorage.getItem('la-lang'); if (s && T[s]) lang = s; } catch(e){}
+
+  /* ---------- text splitting ---------- */
+  function splitChars(el, text){
+    el.textContent = '';
+    let i = 0;
+    text.split(' ').forEach((word, wi, arr) => {
+      const w = document.createElement('span'); w.className = 'w';
+      for (const c of word){ const s = document.createElement('span'); s.className='ch'; s.textContent=c; s.style.setProperty('--i', i++); w.appendChild(s); }
+      el.appendChild(w);
+      if (wi < arr.length-1) el.appendChild(document.createTextNode(' '));
+    });
+    el.setAttribute('aria-label', text);
+    [...el.children].forEach(c => c.setAttribute('aria-hidden','true'));
+  }
+  function splitWords(el, text){
+    el.textContent='';
+    text.split(' ').forEach((word, i, arr) => {
+      const em = /^\*.*\*[.,]?$/.test(word);
+      const s = document.createElement('span'); s.className = 'wd' + (em ? ' em' : '');
+      s.textContent = word.replace(/\*/g,'');
+      el.appendChild(s);
+      if (i < arr.length-1) el.appendChild(document.createTextNode(' '));
+    });
+  }
+
+  function applyLang(l){
+    lang = l; const d = T[l];
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const v = d[el.dataset.i18n]; if (v == null) return;
+      if (el.id === 'manifesto') splitWords(el, v);
+      else if (el.classList.contains('split')) { splitChars(el, v); }
+      else el.textContent = v;
+    });
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
+    document.getElementById('chips').innerHTML = d.chips.map(c => `<span class="chip">${c}</span>`).join('');
+    const half = Math.ceil(d.skills.length/2);
+    const fill = (id, arr) => { document.getElementById(id).innerHTML = [...arr, ...arr, ...arr, ...arr].map(s => `<span>${s}</span>`).join(''); };
+    fill('row1', d.skills.slice(0, half).concat(d.skills.slice(half)));
+    fill('row2', d.skills.slice(half).concat(d.skills.slice(0, half)));
+    document.querySelectorAll('.split').forEach(el => io && io.observe(el));
+    try { localStorage.setItem('la-lang', l); } catch(e){}
+    measure(); tick();
+  }
+
+  /* hero name letters */
+  splitChars(document.querySelector('[data-split-hero]'), 'Laura Acosta');
+
+  /* reveal split headings on view */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
+  }, { threshold: .3 }) : null;
+
+  /* typing effect for pillars after load (re-types the existing text) */
+  function typeIn(el, delay){
+    const full = el.textContent; el.textContent = '';
+    setTimeout(() => {
+      el.classList.add('cursor'); let i = 0;
+      const t = setInterval(() => { el.textContent = full.slice(0, ++i); if (i >= full.length){ clearInterval(t); setTimeout(()=>el.classList.remove('cursor'), 700); } }, 32);
+    }, delay);
+  }
+
+  /* ---------- hero network canvas ---------- */
+  const cv = document.querySelector('.l-net'), cx = cv.getContext('2d');
+  let nodes = [], W = 0, H = 0, DPR = Math.min(2, devicePixelRatio || 1);
+  function sizeCanvas(){
+    W = cv.clientWidth; H = cv.clientHeight; cv.width = W*DPR; cv.height = H*DPR; cx.setTransform(DPR,0,0,DPR,0,0);
+    const n = Math.round(Math.min(70, W*H/18000));
+    nodes = Array.from({length:n}, () => ({ x: W*(.25+Math.random()*.75), y: Math.random()*H, vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25, r: Math.random()*1.6+.6, a: Math.random() < .08 }));
+  }
+  function drawNet(){
+    cx.clearRect(0,0,W,H);
+    for (const p of nodes){ p.x += p.vx; p.y += p.vy; if (p.x<0||p.x>W) p.vx*=-1; if (p.y<0||p.y>H) p.vy*=-1; }
+    for (let i=0;i<nodes.length;i++) for (let j=i+1;j<nodes.length;j++){
+      const a=nodes[i], b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+      if (d < 150){ cx.strokeStyle = `rgba(44,166,164,${(1-d/150)*.35})`; cx.lineWidth = 1; cx.beginPath(); cx.moveTo(a.x,a.y); cx.lineTo(b.x,b.y); cx.stroke(); }
+    }
+    for (const p of nodes){ cx.fillStyle = p.a ? 'rgba(245,166,35,.95)' : 'rgba(229,229,229,.7)'; cx.beginPath(); cx.arc(p.x,p.y,p.a?p.r+1.2:p.r,0,7); cx.fill(); }
+  }
+
+  /* ---------- scroll engine ---------- */
+  const hero = document.querySelector('.hero'), heroInner = document.querySelector('.hero-inner');
+  const layers = [...document.querySelectorAll('.hero .layer')];
+  const nav = document.querySelector('.nav'), bar = document.querySelector('.progress');
+  const ring = document.getElementById('ring'), cards = [...ring.children], stage = ring.parentElement;
+  const apSec = document.getElementById('enfoque'), apSteps = [...document.querySelectorAll('#apSteps li')];
+  const psSec = document.getElementById('proceso'), track = document.getElementById('track'), steps = [...track.children], cnt = document.getElementById('cnt');
+  const r3d = [...document.querySelectorAll('.r3d')];
+  const tl = document.getElementById('timeline');
+  const navLinks = [...document.querySelectorAll('.links a')];
+  const secs = navLinks.map(a => document.querySelector(a.getAttribute('href')));
+  let mx = 0, my = 0, tmx = 0, tmy = 0, R = 300, trackMax = 0;
+  const clamp = (v,a=0,b=1) => Math.min(b, Math.max(a, v));
+
+  function measure(){
+    const cw = Math.min(420, stage.clientWidth*0.78);
+    ring.style.setProperty('--cw', cw + 'px');
+    R = cw * 0.62;
+    cards.forEach((c,i) => c.dataset.base = i*120);
+    if (!RM){
+      trackMax = Math.max(0, track.scrollWidth - innerWidth);
+      psSec.style.height = (innerHeight + trackMax * 1.1) + 'px';
+    }
+  }
+
+  function tick(){
+    const y = scrollY, vh = innerHeight;
+    const docH = document.documentElement.scrollHeight - vh;
+    bar.style.transform = `scaleX(${docH>0 ? y/docH : 0})`;
+    nav.classList.toggle('solid', y > 40);
+
+    // active nav
+    let cur = -1; secs.forEach((s,i) => { if (s && s.getBoundingClientRect().top < vh*.45) cur = i; });
+    navLinks.forEach((a,i) => a.classList.toggle('on', i === cur));
+
+    // manifesto word lighting
+    const man = document.getElementById('manifesto');
+    const mr = man.getBoundingClientRect();
+    const words = man.querySelectorAll('.wd');
+    const mp = RM ? 1 : clamp((vh*.85 - mr.top) / (mr.height + vh*.35));
+    const lit = Math.round(mp * words.length);
+    words.forEach((w,i) => w.classList.toggle('lit', i < lit));
+
+    if (RM) return;
+
+    // hero parallax
+    if (y < vh*1.3){
+      layers.forEach(l => {
+        const sp = +l.dataset.speed, dp = +l.dataset.depth;
+        l.style.transform = `translate3d(${mx*dp}px, ${y*sp + my*dp}px, 0)`;
+      });
+      const hp = clamp(y / (vh*.9));
+      heroInner.style.transform = `translate3d(0, ${y*.35}px, 0) rotateX(${hp*22}deg) scale(${1-hp*.08})`;
+      heroInner.style.opacity = 1 - hp*1.1;
+    }
+
+    // r3d tilt-in
+    r3d.forEach(el => {
+      const r = el.getBoundingClientRect();
+      const p = clamp((vh - r.top) / (vh*.55));
+      el.style.transform = `perspective(1200px) translate3d(0, ${(1-p)*70}px, 0) rotateX(${(1-p)*-16}deg)`;
+      el.style.opacity = .35 + p*.65;
+    });
+
+    // timeline fill
+    const tr = tl.getBoundingClientRect();
+    tl.style.setProperty('--tp', clamp((vh*.6 - tr.top) / tr.height).toFixed(3));
+
+    // cylinder
+    const ar = apSec.getBoundingClientRect();
+    const ap = clamp(-ar.top / (ar.height - vh));
+    const rot = ap * 240;
+    ring.style.transform = `translateZ(${-R}px) rotateY(${-rot}deg)`;
+    const act = Math.min(2, Math.round(ap*2));
+    cards.forEach((c,i) => {
+      const ang = ((i*120 - rot) % 360 + 540) % 360 - 180;
+      const face = Math.cos(ang*Math.PI/180);
+      c.style.transform = `rotateY(${i*120}deg) translateZ(${R}px)`;
+      c.style.opacity = clamp(.15 + face*.85, 0, 1);
+      c.style.pointerEvents = face > .8 ? 'auto' : 'none';
+    });
+    apSteps.forEach((s,i) => s.classList.toggle('on', i === act));
+
+    // horizontal track
+    const pr = psSec.getBoundingClientRect();
+    const pp = clamp(-pr.top / (pr.height - vh));
+    track.style.transform = `translate3d(${-pp*trackMax}px,0,0)`;
+    const mid = innerWidth/2; let best = 0, bd = 1e9;
+    steps.forEach((s,i) => {
+      const b = s.getBoundingClientRect(); const c = b.left + b.width/2 + (parseFloat(s.dataset.tx)||0);
+      const off = clamp((c - mid) / innerWidth, -1, 1);
+      if (Math.abs(c-mid) < bd){ bd = Math.abs(c-mid); best = i; }
+      s.style.transform = `rotateY(${off*-28}deg) translateZ(${-Math.abs(off)*120}px)`;
+    });
+    cnt.textContent = String(best+1).padStart(2,'0');
+  }
+
+  let ticking = false;
+  const onScroll = () => { if (!ticking){ ticking = true; requestAnimationFrame(() => { tick(); ticking = false; }); } };
+  addEventListener('scroll', onScroll, { passive:true });
+  addEventListener('resize', () => { sizeCanvas(); measure(); tick(); });
+
+  // mouse parallax (eased)
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    tmx = (e.clientX - r.left)/r.width - .5; tmy = (e.clientY - r.top)/r.height - .5;
+  });
+  hero.addEventListener('pointerleave', () => { tmx = 0; tmy = 0; });
+
+  function loop(){
+    if (!RM){
+      mx += (tmx - mx)*.06; my += (tmy - my)*.06;
+      if (scrollY < innerHeight*1.3){ drawNet(); layers.forEach(l => { const sp=+l.dataset.speed, dp=+l.dataset.depth; l.style.transform = `translate3d(${mx*dp}px, ${scrollY*sp + my*dp}px, 0)`; }); }
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // card tilt on hover (process + jobs)
+  if (!RM && matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.job').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect(); const x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
+        el.style.boxShadow = `${-x*30}px ${-y*30+20}px 60px -30px rgba(0,0,0,.6)`;
+        el.style.borderColor = 'rgba(44,166,164,.45)';
+      });
+      el.addEventListener('pointerleave', () => { el.style.boxShadow=''; el.style.borderColor=''; });
+    });
+  }
+
+  /* ---------- controls ---------- */
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang); }));
+  const toast = document.getElementById('toast'), email = document.getElementById('email');
+  document.getElementById('copy').addEventListener('click', () => {
+    const txt = email.textContent;
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(email); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try {
+      navigator.clipboard.writeText(txt).then(() => { toast.textContent = T[lang].copied; }, () => { sel(); toast.textContent = T[lang].copyFail; });
+    } catch(e){ sel(); toast.textContent = T[lang].copyFail; }
+  });
+
+  /* ---------- boot ---------- */
+  sizeCanvas();
+  applyLang(lang);
+  if (!io) document.querySelectorAll('.split').forEach(el => el.classList.add('in'));
+  if (!RM) document.querySelectorAll('.pillars .typed').forEach((el,i) => typeIn(el, 2300 + i*200));
+  if (RM) drawNet();
+  requestAnimationFrame(loop);
+})();
+</script>
+
+</body></html>
