@@ -145,6 +145,26 @@ section{position:relative}
 .chip{font-size:13px;font-weight:600;padding:7px 12px;border-radius:var(--r-sm);background:var(--white);border:1px solid var(--silver);color:var(--paper-ink);transition:transform .3s var(--ease),border-color .3s}
 .chip:hover{transform:translateY(-3px);border-color:var(--paper-accent)}
 
+/* ===== VALUE: four cards ===== */
+.value{background:linear-gradient(180deg,var(--navy-deep),#0c2649);overflow:hidden}
+.value::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(245,247,250,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,247,250,.04) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);pointer-events:none}
+.value .wrap{position:relative}
+.value .lead{color:var(--silver);max-width:60ch}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.vcard{position:relative;overflow:hidden;border-radius:var(--r-lg);padding:34px;display:flex;flex-direction:column;gap:16px;
+  background:linear-gradient(160deg,rgba(28,46,74,.92),rgba(10,31,68,.92));border:1px solid var(--line);
+  box-shadow:0 30px 60px -34px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.05);transition:border-color .35s,box-shadow .35s}
+.vcard::after{content:"";position:absolute;inset:auto -30% -55% auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(27,166,166,.22),transparent 70%);pointer-events:none}
+.vcard:hover{border-color:rgba(44,166,164,.5);box-shadow:0 36px 70px -30px rgba(0,0,0,.75), 0 0 0 1px rgba(44,166,164,.15)}
+.vcard .ic{width:52px;height:52px;border-radius:var(--r-md);display:grid;place-items:center;background:rgba(44,166,164,.14);border:1px solid rgba(44,166,164,.4)}
+.vcard .ic svg{width:26px;height:26px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.vcard .num{position:absolute;right:26px;top:20px;font-family:var(--display);font-weight:800;font-size:56px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(44,166,164,.35)}
+.vcard h3{font-size:clamp(20px,2.1vw,25px);font-weight:700;color:var(--white);line-height:1.2;padding-right:56px}
+.vcard p{color:var(--silver);font-size:16px}
+.vcard .tags{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:8px}
+.vcard .tags span{font-size:12px;font-weight:600;letter-spacing:.04em;padding:6px 10px;border-radius:var(--r-sm);border:1px solid var(--line);color:var(--muted)}
+.vcard .tags span:first-child{border-color:rgba(245,166,35,.45);color:var(--amber)}
+
 /* ===== APPROACH: sticky 3D cylinder ===== */
 .approach{height:340vh;background:linear-gradient(180deg,var(--navy-deep),#0c2649 60%,var(--navy-deep))}
 .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
@@ -232,6 +252,7 @@ footer em{color:var(--silver)}
   .links{display:none}
   .hero-grid{margin-right:0}
   .profile,.ap-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .vgrid{grid-template-columns:minmax(0,1fr)}
   .ap-copy .ap-steps{display:none}
   .stage{height:min(420px,52svh)}
   .job{grid-template-columns:minmax(0,1fr);gap:10px}
@@ -244,6 +265,7 @@ footer em{color:var(--silver)}
   .band p{font-size:12px}
   .cue{display:none}
   .card3d{padding:26px}
+  .vcard{padding:26px}
   .timeline{padding-left:30px}
   .timeline::before,.timeline .fill{left:6px}
   .job::before{left:-31px}
@@ -275,6 +297,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
     <a class="mark" href="#inicio" aria-label="Laura Acosta, inicio"><b>LA</b><span>Laura Acosta</span></a>
     <ul class="links">
       <li><a href="#perfil" data-i18n="nav.profile">Perfil</a></li>
+      <li><a href="#valor" data-i18n="nav.value">Valor</a></li>
       <li><a href="#enfoque" data-i18n="nav.approach">Enfoque</a></li>
       <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
       <li><a href="#trayectoria" data-i18n="nav.exp">Trayectoria</a></li>
@@ -345,6 +368,47 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
         </dl>
         <div class="chips" id="chips"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUE (four cards) ===== -->
+<section class="value sec" id="valor">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="v.eye">Cómo genero valor</p>
+      <h2 class="h2 split" data-i18n="v.title">Cuatro frentes donde impulso el negocio.</h2>
+      <p class="lead" data-i18n="v.lead">Del primer contacto con el cliente hasta el crecimiento de la cuenta, estas son las áreas donde mi perfil técnico y comercial aporta resultados.</p>
+    </div>
+    <div class="vgrid">
+      <article class="vcard r3d">
+        <span class="num" aria-hidden="true">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></div>
+        <h3 data-i18n="v1.t">Experiencia y operaciones del cliente</h3>
+        <p data-i18n="v1.d">Soy el punto de contacto con el que el cliente puede contar: coordino sus pedidos de principio a fin, comunico con claridad y resuelvo incidencias junto con ingeniería, logística y calidad.</p>
+        <div class="tags" data-vtags="0"></div>
+      </article>
+      <article class="vcard r3d">
+        <span class="num" aria-hidden="true">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></div>
+        <h3 data-i18n="v2.t">Operaciones comerciales y contratos</h3>
+        <p data-i18n="v2.d">Doy orden y rigor al lado comercial: preparo cotizaciones y propuestas, reviso condiciones contractuales y analizo precios y márgenes para que cada acuerdo sea competitivo y rentable.</p>
+        <div class="tags" data-vtags="1"></div>
+      </article>
+      <article class="vcard r3d">
+        <span class="num" aria-hidden="true">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div>
+        <h3 data-i18n="v3.t">Ventas técnicas y soluciones</h3>
+        <p data-i18n="v3.d">Convierto la necesidad técnica del cliente en una solución concreta: desarrollo la propuesta técnica, la presento a cada decisor y doy soporte en la aplicación.</p>
+        <div class="tags" data-vtags="2"></div>
+      </article>
+      <article class="vcard r3d">
+        <span class="num" aria-hidden="true">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+        <h3 data-i18n="v4.t">Apoyo al desarrollo de negocio</h3>
+        <p data-i18n="v4.d">Ayudo a abrir camino para crecer: identifico oportunidades, analizo el mercado y mantengo una relación activa con los clientes para impulsar el crecimiento del territorio.</p>
+        <div class="tags" data-vtags="3"></div>
+      </article>
     </div>
   </div>
 </section>
@@ -478,7 +542,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   /* ---------- i18n ---------- */
   const T = {
     es: {
-      'nav.profile':'Perfil','nav.approach':'Enfoque','nav.process':'Proceso','nav.exp':'Trayectoria','nav.contact':'Contacto',
+      'nav.profile':'Perfil','nav.value':'Valor','nav.approach':'Enfoque','nav.process':'Proceso','nav.exp':'Trayectoria','nav.contact':'Contacto',
       'hero.eyebrow':'Ingeniería comercial · Ventas técnicas B2B','hero.role':'Ingeniera Comercial y de Ventas Técnicas','hero.bi':'Bilingüe (EN/ES)',
       'hero.tag':'Desempeño comercial, con ingeniería.','p1':'Asegurar el cumplimiento.','p2':'Diferenciar el valor.','p3':'Alinear el desempeño.',
       'cta.talk':'Hablemos','cta.see':'Ver mi enfoque','hero.scroll':'Desliza','hero.band':'Conectando la precisión técnica con resultados comerciales estratégicos.',
@@ -487,6 +551,16 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       'f.role.k':'Rol','f.role.v':'Ventas técnicas e ingeniería comercial','f.lang.k':'Idiomas','f.lang.v':'Español · Inglés, nivel profesional',
       'f.focus.k':'Enfoque','f.focus.v':'Cumplimiento, valor y desempeño','f.mkt.k':'Mercado','f.mkt.v':'B2B técnico e industrial',
       chips:['Especificación técnica','Cumplimiento normativo','Propuestas de valor','Negociación','Preventa','CRM y pronóstico','Presentaciones ejecutivas'],
+      'v.eye':'Cómo genero valor','v.title':'Cuatro frentes donde impulso el negocio.',
+      'v.lead':'Del primer contacto con el cliente hasta el crecimiento de la cuenta, estas son las áreas donde mi perfil técnico y comercial aporta resultados.',
+      'v1.t':'Experiencia y operaciones del cliente','v1.d':'Soy el punto de contacto con el que el cliente puede contar: coordino sus pedidos de principio a fin, comunico con claridad y resuelvo incidencias junto con ingeniería, logística y calidad.',
+      'v2.t':'Operaciones comerciales y contratos','v2.d':'Doy orden y rigor al lado comercial: preparo cotizaciones y propuestas, reviso condiciones contractuales y analizo precios y márgenes para que cada acuerdo sea competitivo y rentable.',
+      'v3.t':'Ventas técnicas y soluciones','v3.d':'Convierto la necesidad técnica del cliente en una solución concreta: desarrollo la propuesta técnica, la presento a cada decisor y doy soporte en la aplicación.',
+      'v4.t':'Apoyo al desarrollo de negocio','v4.d':'Ayudo a abrir camino para crecer: identifico oportunidades, analizo el mercado y mantengo una relación activa con los clientes para impulsar el crecimiento del territorio.',
+      vtags:[['Atención al cliente','Coordinación de pedidos','Comunicación con clientes','Resolución de incidencias','Colaboración multifuncional'],
+             ['Precios','Contratos','Gestión de propuestas','Análisis comercial','Operaciones de ventas'],
+             ['Propuestas técnicas','Desarrollo de soluciones','Presentaciones a clientes','Soporte de aplicaciones'],
+             ['Identificación de oportunidades','Análisis de mercado','Relación con clientes','Crecimiento del territorio']],
       'ap.eye':'Enfoque','ap.title':'Tres pilares, un mismo resultado.','ap.lead':'Cada oportunidad pasa por los mismos tres filtros antes de llegar al cliente.',
       'c1.t':'Asegurar el cumplimiento','c1.d':'Reviso especificaciones, normas y certificaciones antes de cotizar, para que la propuesta pase la auditoría del cliente a la primera.','c1.a':'Normas','c1.b':'Especificaciones','c1.c':'Documentación',
       'c2.t':'Diferenciar el valor','c2.d':'Convierto datos de desempeño en argumentos de negocio: costo total, riesgo evitado y retorno, en el lenguaje de cada decisor.',
@@ -508,7 +582,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       'ft':'Desempeño comercial, con ingeniería.'
     },
     en: {
-      'nav.profile':'Profile','nav.approach':'Approach','nav.process':'Process','nav.exp':'Experience','nav.contact':'Contact',
+      'nav.profile':'Profile','nav.value':'Value','nav.approach':'Approach','nav.process':'Process','nav.exp':'Experience','nav.contact':'Contact',
       'hero.eyebrow':'Commercial engineering · B2B technical sales','hero.role':'Technical Sales & Commercial Engineer','hero.bi':'Bilingual (EN/ES)',
       'hero.tag':'Commercial performance, engineered.','p1':'Ensure compliance.','p2':'Differentiate value.','p3':'Align performance.',
       'cta.talk':"Let's talk",'cta.see':'See my approach','hero.scroll':'Scroll','hero.band':'Connecting technical precision with strategic commercial outcomes.',
@@ -517,6 +591,16 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       'f.role.k':'Role','f.role.v':'Technical sales and commercial engineering','f.lang.k':'Languages','f.lang.v':'Spanish · English, professional level',
       'f.focus.k':'Focus','f.focus.v':'Compliance, value and performance','f.mkt.k':'Market','f.mkt.v':'Technical and industrial B2B',
       chips:['Technical specification','Regulatory compliance','Value propositions','Negotiation','Pre-sales','CRM & forecasting','Executive presentations'],
+      'v.eye':'How I create value','v.title':'Four areas where I move the business forward.',
+      'v.lead':'From first customer contact to account growth, these are the areas where my technical and commercial background delivers results.',
+      'v1.t':'Customer Experience & Customer Operations','v1.d':'I am the point of contact customers can rely on: I coordinate their orders end to end, communicate clearly and resolve issues together with engineering, logistics and quality.',
+      'v2.t':'Commercial Operations & Contracts','v2.d':'I bring order and rigor to the commercial side: I prepare quotes and proposals, review contract terms and analyze pricing and margins so every deal is competitive and profitable.',
+      'v3.t':'Technical Sales & Solutions','v3.d':"I turn the customer's technical need into a concrete solution: I develop the technical proposal, present it to each decision-maker and provide application support.",
+      'v4.t':'Business Development Support','v4.d':'I help open the way to growth: I identify opportunities, analyze the market and keep an active relationship with customers to support territory growth.',
+      vtags:[['Customer support','Order coordination','Customer communication','Issue resolution','Cross-functional collaboration'],
+             ['Pricing','Contracts','Proposal management','Commercial analysis','Sales operations'],
+             ['Technical proposals','Solution development','Customer presentations','Application support'],
+             ['Opportunity identification','Market analysis','Customer engagement','Territory growth support']],
       'ap.eye':'Approach','ap.title':'Three pillars, one outcome.','ap.lead':'Every opportunity goes through the same three filters before it reaches the customer.',
       'c1.t':'Ensure compliance','c1.d':"I review specifications, standards and certifications before quoting, so the proposal passes the customer's audit the first time.",'c1.a':'Standards','c1.b':'Specifications','c1.c':'Documentation',
       'c2.t':'Differentiate value','c2.d':"I turn performance data into business arguments: total cost, risk avoided and return, in each decision-maker's language.",
@@ -576,6 +660,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
     });
     document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
     document.getElementById('chips').innerHTML = d.chips.map(c => `<span class="chip">${c}</span>`).join('');
+    document.querySelectorAll('[data-vtags]').forEach(el => { el.innerHTML = d.vtags[+el.dataset.vtags].map(t => `<span>${t}</span>`).join(''); });
     const half = Math.ceil(d.skills.length/2);
     const fill = (id, arr) => { document.getElementById(id).innerHTML = [...arr, ...arr, ...arr, ...arr].map(s => `<span>${s}</span>`).join(''); };
     fill('row1', d.skills.slice(0, half).concat(d.skills.slice(half)));
