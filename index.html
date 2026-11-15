@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Laura Acosta Portafolio (Copy)</title>
+<title>Laura Acosta Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,6 +137,12 @@ section{position:relative}
 .manifesto .wd{opacity:.18;transition:opacity .35s}
 .manifesto .wd.lit{opacity:1}
 .manifesto .wd.em{color:var(--paper-accent)}
+.manifesto p,.manifesto ol{margin:0}
+.manifesto .m-how{margin:32px 0 14px;font-family:var(--text);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-accent)}
+.manifesto .m-steps{list-style:none;padding:0;display:grid;gap:12px;counter-reset:ms;font-size:clamp(18px,1.9vw,23px);line-height:1.4;font-weight:600}
+.manifesto .m-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:baseline;padding-left:14px;border-left:3px solid var(--amber)}
+.manifesto .m-steps li::before{counter-increment:ms;content:"0" counter(ms);font-family:var(--display);font-weight:800;font-size:.8em;color:var(--paper-accent)}
+.manifesto .m-close{margin-top:28px;font-family:var(--text);font-size:clamp(15px,1.4vw,17px);font-weight:400;line-height:1.6;letter-spacing:0;color:var(--paper-muted)}
 .facts{display:grid;gap:0;border-top:1px solid var(--silver)}
 .fact{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding-block:18px;border-bottom:1px solid var(--silver)}
 .fact dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-muted);font-weight:600;padding-top:3px}
@@ -176,7 +182,7 @@ section{position:relative}
 .ap-steps li::before{content:"";width:28px;height:2px;background:var(--line);transition:background .4s,width .4s var(--ease)}
 .ap-steps li.on{color:var(--white)}
 .ap-steps li.on::before{background:var(--amber);width:48px}
-.stage{position:relative;height:min(460px,62svh);perspective:1400px;display:grid;place-items:center}
+.stage{position:relative;height:min(540px,72svh);perspective:1400px;display:grid;place-items:center}
 .ring{position:relative;width:var(--cw);height:100%;transform-style:preserve-3d}
 .card3d{position:absolute;inset:0;border-radius:var(--r-lg);padding:34px;display:flex;flex-direction:column;gap:18px;
   background:linear-gradient(160deg,rgba(28,46,74,.96),rgba(10,31,68,.96));border:1px solid rgba(44,166,164,.35);
@@ -247,14 +253,79 @@ footer{background:var(--black);border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;font-size:13px;color:var(--muted)}
 footer em{color:var(--silver)}
 
+/* ===== copy 2 additions ===== */
+.spine{font-size:clamp(16px,1.6vw,19px);color:var(--silver);max-width:52ch}
+.why{font-size:14px;color:var(--teal-bright);text-decoration:none;border-bottom:1px dashed rgba(27,166,166,.6);justify-self:start;padding-bottom:2px}
+.why:hover{color:var(--white)}
+.vcard .vlink{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.vcard .vlink b{color:var(--amber);font-weight:600}
+.ap-steps li > div{display:grid;gap:2px}
+.ap-steps li small{font-family:var(--text);font-weight:400;font-size:12px;letter-spacing:.06em;color:var(--muted);opacity:.8}
+.approach .h2{font-size:clamp(28px,3.4vw,44px)}
+.ap-note{font-size:14px;color:var(--muted);font-style:italic;max-width:46ch}
+.card3d{gap:14px;padding:30px}
+.card3d .ic{width:46px;height:46px}
+.card3d .ic svg{width:24px;height:24px}
+.card3d .persona{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--amber);margin-top:-6px}
+.card3d dl{margin:0;display:grid;gap:10px}
+.card3d dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.card3d dd{margin:2px 0 0;color:var(--silver);font-size:15px;line-height:1.5}
+/* method strip */
+.method{background:var(--navy-deep)}
+.msteps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;counter-reset:m}
+.msteps .step{width:auto;min-height:0;padding:24px;gap:10px}
+.msteps .step h3{font-size:19px}
+.msteps .step p{font-size:14px;line-height:1.55}
+.msteps .step.pick{border-color:rgba(245,166,35,.55)}
+/* proof */
+.proof{background:linear-gradient(180deg,var(--navy-deep),#0c2649)}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.case{border-radius:var(--r-lg);padding:28px;background:rgba(28,46,74,.7);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.case .line{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.case h3{font-size:20px;color:var(--white)}
+.case dl{margin:0;display:grid;gap:10px}
+.case dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.case dd{margin:2px 0 0;color:var(--silver);font-size:15px}
+.case .mfg{margin-top:auto;padding:12px 14px;border-radius:var(--r-md);background:rgba(44,166,164,.1);border:1px solid rgba(44,166,164,.35)}
+.case .mfg dd{color:var(--white)}
+
+/* experience */
+.job .jtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.job .jtags span{font-size:11px;font-weight:600;letter-spacing:.04em;padding:4px 8px;border-radius:var(--r-sm);border:1px solid rgba(245,166,35,.45);color:var(--amber)}
+.job .jsub{font-size:14px;color:var(--muted);margin:-4px 0 12px}
+.edu{margin-top:56px;display:grid;gap:18px}
+.edu h3{font-size:20px;color:var(--white)}
+.edu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.edu-item{display:grid;gap:4px;padding:18px 20px;border-radius:var(--r-md);background:rgba(28,46,74,.5);border:1px solid var(--line)}
+.edu-item b{color:var(--white);font-weight:600}
+.edu-item span{font-size:14px;color:var(--muted)}
+
+/* contact form */
+.cform{display:grid;gap:16px;max-width:640px;padding:26px;border-radius:var(--r-lg);background:rgba(28,46,74,.6);border:1px solid var(--line)}
+.cform[hidden]{display:none}
+.cform-title{font-family:var(--display);font-weight:600;font-size:18px;color:var(--white)}
+.cgrid{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cgrid label{display:grid;gap:6px;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--muted)}
+.cgrid .full{grid-column:1/-1}
+.cgrid input,.cgrid textarea{font:inherit;font-size:15px;font-weight:400;letter-spacing:0;color:var(--white);background:rgba(10,31,68,.7);border:1px solid var(--line);border-radius:var(--r-sm);padding:11px 12px;width:100%;resize:vertical}
+.cgrid input:focus,.cgrid textarea:focus{outline:none;border-color:var(--teal)}
+.cgrid .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.cform .btn{justify-self:start}
+.cform .btn:disabled{opacity:.6;cursor:wait}
+
 /* ===== responsive ===== */
+@media (max-width: 1100px){
+  .msteps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cases{grid-template-columns:minmax(0,1fr)}
+}
 @media (max-width: 900px){
   .links{display:none}
   .hero-grid{margin-right:0}
   .profile,.ap-grid{grid-template-columns:minmax(0,1fr);gap:40px}
   .vgrid{grid-template-columns:minmax(0,1fr)}
   .ap-copy .ap-steps{display:none}
-  .stage{height:min(420px,52svh)}
+  .stage{height:min(580px,74svh)}
+  .msteps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .job{grid-template-columns:minmax(0,1fr);gap:10px}
   .sec{padding-block:88px}
 }
@@ -264,7 +335,15 @@ footer em{color:var(--silver)}
   .role{flex-direction:column;align-items:flex-start}
   .band p{font-size:12px}
   .cue{display:none}
-  .card3d{padding:26px}
+  .card3d{padding:22px;gap:10px}
+  .card3d .ic{display:none}
+  .card3d dd{font-size:14px}
+  .card3d .num{font-size:44px;right:18px;top:14px}
+  .card3d h3{padding-right:44px;font-size:21px}
+  .msteps{grid-template-columns:minmax(0,1fr)}
+  .edu-grid{grid-template-columns:minmax(0,1fr)}
+  .cgrid{grid-template-columns:minmax(0,1fr)}
+  .cform{padding:20px}
   .vcard{padding:26px}
   .timeline{padding-left:30px}
   .timeline::before,.timeline .fill{left:6px}
@@ -298,9 +377,10 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
     <ul class="links">
       <li><a href="#perfil" data-i18n="nav.profile">Perfil</a></li>
       <li><a href="#valor" data-i18n="nav.value">Valor</a></li>
-      <li><a href="#enfoque" data-i18n="nav.approach">Enfoque</a></li>
-      <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
+      <li><a href="#enfoque" data-i18n="nav.approach">La portada</a></li>
+
       <li><a href="#trayectoria" data-i18n="nav.exp">Trayectoria</a></li>
+      <li><a href="#casos" data-i18n="nav.proof">Casos</a></li>
       <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="navR">
@@ -326,18 +406,20 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
 
   <div class="hero-inner wrap">
     <div class="hero-grid">
-      <p class="eyebrow fade-up" style="--d:100ms" data-i18n="hero.eyebrow">Ingeniería comercial · Ventas técnicas B2B</p>
+      <p class="eyebrow fade-up" style="--d:100ms" data-i18n="hero.eyebrow">Ventas técnicas · Operaciones comerciales · Experiencia del cliente B2B</p>
       <h1 class="name" data-split-hero>Laura Acosta</h1>
       <p class="role fade-up" style="--d:800ms"><span data-i18n="hero.role">Ingeniera Comercial y de Ventas Técnicas</span><span class="sep">|</span><span data-i18n="hero.bi">Bilingüe (EN/ES)</span></p>
       <p class="tagline"><span class="clip" data-i18n="hero.tag">Desempeño comercial, con ingeniería.</span></p>
+      <p class="spine fade-up" style="--d:1500ms" data-i18n="hero.spine">Hago confiable la ejecución comercial: de la primera cotización al pedido entregado.</p>
       <ul class="pillars" aria-label="Pilares">
         <li class="fade-up" style="--d:2200ms"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span class="typed" data-i18n="p1">Asegurar el cumplimiento.</span></li>
         <li class="fade-up" style="--d:2400ms"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span class="typed" data-i18n="p2">Diferenciar el valor.</span></li>
         <li class="fade-up" style="--d:2600ms"><svg viewBox="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><path d="M12 2v20M3 7l18 10M21 7 3 17"/></svg><span class="typed" data-i18n="p3">Alinear el desempeño.</span></li>
       </ul>
+      <a class="why fade-up" style="--d:2800ms" href="#enfoque" data-i18n="hero.why">¿Por qué estas tres líneas? →</a>
       <div class="cta fade-up" style="--d:2900ms">
         <a class="btn btn-signal" href="#contacto"><span data-i18n="cta.talk">Hablemos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#enfoque" data-i18n="cta.see">Ver mi enfoque</a>
+        <a class="btn btn-ghost" href="#trayectoria" data-i18n="cta.see">Ver trayectoria</a>
       </div>
     </div>
   </div>
@@ -345,7 +427,6 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   <div class="band">
     <div class="wrap">
       <a class="cue" href="#perfil"><i></i><span data-i18n="hero.scroll">Desliza</span></a>
-      <p data-i18n="hero.band">Conectando la precisión técnica con resultados comerciales estratégicos.</p>
     </div>
   </div>
 </section>
@@ -355,13 +436,14 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-i18n="pr.eye">Perfil</p>
-      <h2 class="h2 split" data-i18n="pr.title">Entre la ingeniería y el cierre.</h2>
+      <h2 class="h2 split" data-i18n="pr.title">Entre la ingeniería y el cliente.</h2>
     </div>
     <div class="profile">
-      <p class="manifesto" id="manifesto" data-i18n="pr.body">Traduzco requisitos técnicos en decisiones de compra. Trabajo entre ingeniería, clientes y dirección comercial para que cada propuesta *cumpla* la norma, muestre su *valor* con claridad y se sostenga en *resultados* medibles.</p>
+      <div class="manifesto" id="manifesto" data-i18n="pr.body"></div>
       <div class="r3d">
         <dl class="facts">
-          <div class="fact"><dt data-i18n="f.role.k">Rol</dt><dd data-i18n="f.role.v">Ventas técnicas e ingeniería comercial</dd></div>
+          <div class="fact"><dt data-i18n="f.role.k">Rol</dt><dd data-i18n="f.role.v">Ventas técnicas, gestión de cuentas y atención al cliente B2B</dd></div>
+          <div class="fact"><dt data-i18n="f.edu.k">Formación</dt><dd data-i18n="f.edu.v">Ingeniería Industrial y de Sistemas · Tecnológico de Monterrey</dd></div>
           <div class="fact"><dt data-i18n="f.lang.k">Idiomas</dt><dd data-i18n="f.lang.v">Español · Inglés, nivel profesional</dd></div>
           <div class="fact"><dt data-i18n="f.focus.k">Enfoque</dt><dd data-i18n="f.focus.v">Cumplimiento, valor y desempeño</dd></div>
           <div class="fact"><dt data-i18n="f.mkt.k">Mercado</dt><dd data-i18n="f.mkt.v">B2B técnico e industrial</dd></div>
@@ -405,8 +487,8 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       <article class="vcard r3d">
         <span class="num" aria-hidden="true">04</span>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
-        <h3 data-i18n="v4.t">Apoyo al desarrollo de negocio</h3>
-        <p data-i18n="v4.d">Ayudo a abrir camino para crecer: identifico oportunidades, analizo el mercado y mantengo una relación activa con los clientes para impulsar el crecimiento del territorio.</p>
+        <h3 data-i18n="v4.t">Gestión de cuentas y desarrollo de negocio</h3>
+        <p data-i18n="v4.d">Hago crecer las cuentas desde las necesidades del cliente: al atenderlo de cerca, identifico lo que aún no ha resuelto y lo convierto en nuevas oportunidades, soluciones de otras líneas de producto y renovaciones de contrato.</p>
         <div class="tags" data-vtags="3"></div>
       </article>
     </div>
@@ -420,58 +502,39 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       <div class="ap-copy">
         <p class="eyebrow" data-i18n="ap.eye">Enfoque</p>
         <h2 class="h2 split" data-i18n="ap.title">Tres pilares, un mismo resultado.</h2>
-        <p style="color:var(--silver);max-width:46ch" data-i18n="ap.lead">Cada oportunidad pasa por los mismos tres filtros antes de llegar al cliente.</p>
+        <p style="color:var(--silver);max-width:50ch" data-i18n="ap.lead"></p>
         <ol class="ap-steps" id="apSteps">
-          <li class="on" data-i18n="c1.t">Asegurar el cumplimiento</li>
-          <li data-i18n="c2.t">Diferenciar el valor</li>
-          <li data-i18n="c3.t">Alinear el desempeño</li>
+          <li class="on"><div><span data-i18n="c1.t"></span><small>Risk-Mitigators</small></div></li>
+          <li><div><span data-i18n="c2.t"></span><small>Growth-Hunters</small></div></li>
+          <li><div><span data-i18n="c3.t"></span><small>Strategic-Orchestrators</small></div></li>
         </ol>
+        <p class="ap-note" data-i18n="ap.note"></p>
       </div>
       <div class="stage">
         <div class="ring" id="ring">
           <article class="card3d">
             <span class="num" aria-hidden="true">01</span>
             <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
-            <h3 data-i18n="c1.t">Asegurar el cumplimiento</h3>
-            <p data-i18n="c1.d">Reviso especificaciones, normas y certificaciones antes de cotizar, para que la propuesta pase la auditoría del cliente a la primera.</p>
-            <div class="tags"><span data-i18n="c1.a">Normas</span><span data-i18n="c1.b">Especificaciones</span><span data-i18n="c1.c">Documentación</span></div>
+            <h3 data-i18n="c1.t"></h3>
+            <p class="persona">Risk-Mitigators</p>
+            <dl><div><dt data-i18n="k.for"></dt><dd data-i18n="c1.f"></dd></div><div><dt data-i18n="k.need"></dt><dd data-i18n="c1.n"></dd></div><div><dt data-i18n="k.bring"></dt><dd data-i18n="c1.b"></dd></div></dl>
           </article>
           <article class="card3d">
             <span class="num" aria-hidden="true">02</span>
             <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div>
-            <h3 data-i18n="c2.t">Diferenciar el valor</h3>
-            <p data-i18n="c2.d">Convierto datos de desempeño en argumentos de negocio: costo total, riesgo evitado y retorno, en el lenguaje de cada decisor.</p>
-            <div class="tags"><span>TCO</span><span>ROI</span><span>Benchmarking</span></div>
+            <h3 data-i18n="c2.t"></h3>
+            <p class="persona">Growth-Hunters</p>
+            <dl><div><dt data-i18n="k.for"></dt><dd data-i18n="c2.f"></dd></div><div><dt data-i18n="k.need"></dt><dd data-i18n="c2.n"></dd></div><div><dt data-i18n="k.bring"></dt><dd data-i18n="c2.b"></dd></div></dl>
           </article>
           <article class="card3d">
             <span class="num" aria-hidden="true">03</span>
             <div class="ic"><svg viewBox="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><path d="M12 2v20M3 7l18 10M21 7 3 17"/></svg></div>
-            <h3 data-i18n="c3.t">Alinear el desempeño</h3>
-            <p data-i18n="c3.d">Conecto lo que se promete en ventas con lo que entrega operación, con métricas compartidas y seguimiento después del cierre.</p>
-            <div class="tags"><span>KPIs</span><span data-i18n="c3.b">Postventa</span><span data-i18n="c3.c">Mejora continua</span></div>
+            <h3 data-i18n="c3.t"></h3>
+            <p class="persona" data-i18n="c3.p">Strategic-Orchestrators</p>
+            <dl><div><dt data-i18n="k.for"></dt><dd data-i18n="c3.f"></dd></div><div><dt data-i18n="k.need"></dt><dd data-i18n="c3.n"></dd></div><div><dt data-i18n="k.bring"></dt><dd data-i18n="c3.b"></dd></div></dl>
           </article>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS (horizontal 3D) ===== -->
-<section class="process" id="proceso">
-  <div class="stick">
-    <div class="wrap process-head">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="ps.eye">Proceso</p>
-        <h2 class="h2 split" data-i18n="ps.title">De la necesidad técnica al resultado medido.</h2>
-      </div>
-      <p class="counter" aria-hidden="true"><b id="cnt">01</b> / 05</p>
-    </div>
-    <div class="track" id="track">
-      <article class="step" style="--n:1"><span class="idx">01</span><h3 data-i18n="s1.t">Diagnóstico</h3><p data-i18n="s1.d">Entiendo la aplicación, el proceso del cliente y los criterios reales de compra.</p><div class="bar"><i></i></div></article>
-      <article class="step" style="--n:2"><span class="idx">02</span><h3 data-i18n="s2.t">Especificación</h3><p data-i18n="s2.d">Traduzco necesidades en requisitos técnicos verificables y en las normas que aplican.</p><div class="bar"><i></i></div></article>
-      <article class="step" style="--n:3"><span class="idx">03</span><h3 data-i18n="s3.t">Propuesta de valor</h3><p data-i18n="s3.d">Construyo la solución y el caso económico para ingeniería, compras y dirección.</p><div class="bar"><i></i></div></article>
-      <article class="step" style="--n:4"><span class="idx">04</span><h3 data-i18n="s4.t">Negociación</h3><p data-i18n="s4.d">Cierro con condiciones claras de alcance, plazos y desempeño comprometido.</p><div class="bar"><i></i></div></article>
-      <article class="step" style="--n:5"><span class="idx">05</span><h3 data-i18n="s5.t">Seguimiento</h3><p data-i18n="s5.d">Mido los resultados contra lo prometido y detecto la siguiente oportunidad.</p><div class="bar"><i></i></div></article>
     </div>
   </div>
 </section>
@@ -481,27 +544,26 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-i18n="ex.eye">Trayectoria</p>
-      <h2 class="h2 split" data-i18n="ex.title">Experiencia que respalda cada propuesta.</h2>
-      <p class="note" data-i18n="ex.note">Contenido de ejemplo: reemplaza empresas, fechas y logros con tu trayectoria real.</p>
+      <h2 class="h2 split" data-i18n="ex.title">18+ años: del campo al lado comercial.</h2>
+      <p class="lead" style="color:var(--silver);max-width:62ch" data-i18n="ex.lead"></p>
     </div>
-    <div class="timeline" id="timeline">
-      <span class="fill" aria-hidden="true"></span>
-      <article class="job r3d">
-        <div><p class="when" data-i18n="j1.w">20XX – Actual</p><p class="org" data-i18n="j1.o">Empresa · Ciudad</p></div>
-        <div><h3 data-i18n="j1.t">Ingeniera Comercial · Ventas Técnicas</h3>
-          <ul><li data-i18n="j1.a">Gestión de cuentas industriales clave desde el diagnóstico hasta la postventa.</li><li data-i18n="j1.b">Propuestas técnico‑económicas alineadas a normas y requisitos del cliente.</li><li data-i18n="j1.c">Coordinación entre ingeniería, operación y dirección comercial.</li></ul></div>
-      </article>
-      <article class="job r3d">
-        <div><p class="when" data-i18n="j2.w">20XX – 20XX</p><p class="org" data-i18n="j2.o">Empresa · Ciudad</p></div>
-        <div><h3 data-i18n="j2.t">Ingeniera de Aplicaciones · Preventa</h3>
-          <ul><li data-i18n="j2.a">Selección y dimensionamiento de soluciones según la aplicación del cliente.</li><li data-i18n="j2.b">Demostraciones técnicas y presentaciones ejecutivas en inglés y español.</li></ul></div>
-      </article>
-      <article class="job r3d">
-        <div><p class="when" data-i18n="j3.w">20XX – 20XX</p><p class="org" data-i18n="j3.o">Universidad · Ciudad</p></div>
-        <div><h3 data-i18n="j3.t">Formación en Ingeniería</h3>
-          <ul><li data-i18n="j3.a">Base técnica para leer especificaciones, normas y datos de desempeño.</li></ul></div>
-      </article>
+    <div class="timeline" id="timeline"><span class="fill" aria-hidden="true"></span></div>
+    <div class="edu">
+      <h3 data-i18n="ex.edu"></h3>
+      <div class="edu-grid" id="edu"></div>
     </div>
+  </div>
+</section>
+
+<!-- ===== PROOF (cases) ===== -->
+<section class="proof sec" id="casos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="pf.eye">Casos</p>
+      <h2 class="h2 split" data-i18n="pf.title">Lo que hice en petróleo y gas, y cómo se traduce.</h2>
+      <p class="note" data-i18n="pf.note"></p>
+    </div>
+    <div class="cases" id="cases"></div>
   </div>
 </section>
 
@@ -516,13 +578,23 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   <span class="glow" aria-hidden="true"></span>
   <div class="wrap ct">
     <p class="eyebrow" data-i18n="ct.eye">Contacto</p>
-    <h2 class="big"><span class="split" data-i18n="ct.t1">¿Diseñamos tu siguiente</span> <span class="hl" data-i18n="ct.t2">resultado comercial?</span></h2>
+    <h2 class="big"><span class="hl" data-i18n="ct.t2">Hablemos.</span></h2>
     <p class="ct-lead" data-i18n="ct.lead">Disponible para roles de ventas técnicas, ingeniería comercial y gestión de cuentas en mercados de habla inglesa e hispana.</p>
     <div class="ct-row">
-      <div class="addr"><code id="email">tu.correo@ejemplo.com</code><button class="btn btn-signal btn-sm" type="button" id="copy" data-i18n="ct.copy">Copiar correo</button></div>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="btn btn-signal" href="https://www.linkedin.com/in/nlaura-acosta/" target="_blank" rel="noopener"><span data-i18n="ct.li">Escríbeme en LinkedIn</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
-    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <form class="cform" id="cform" hidden novalidate>
+      <p class="cform-title" data-i18n="ct.f.title">O déjame un mensaje aquí</p>
+      <div class="cgrid">
+        <label><span data-i18n="ct.f.name">Nombre</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="ct.f.email">Correo</span><input type="email" name="email" autocomplete="email" required></label>
+        <label class="full"><span data-i18n="ct.f.co">Empresa (opcional)</span><input name="company" autocomplete="organization"></label>
+        <label class="full"><span data-i18n="ct.f.msg">Mensaje</span><textarea name="message" rows="5" required></textarea></label>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      </div>
+      <button class="btn btn-ghost" type="submit" data-i18n="ct.f.send">Enviar mensaje</button>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 </main>
@@ -543,24 +615,24 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   const T = {
     es: {
       'nav.profile':'Perfil','nav.value':'Valor','nav.approach':'Enfoque','nav.process':'Proceso','nav.exp':'Trayectoria','nav.contact':'Contacto',
-      'hero.eyebrow':'Ingeniería comercial · Ventas técnicas B2B','hero.role':'Ingeniera Comercial y de Ventas Técnicas','hero.bi':'Bilingüe (EN/ES)',
+      'hero.eyebrow':'Ventas técnicas · Operaciones comerciales · Experiencia del cliente B2B','hero.role':'Ingeniera Comercial y de Ventas Técnicas','hero.bi':'Bilingüe (EN/ES)',
       'hero.tag':'Desempeño comercial, con ingeniería.','p1':'Asegurar el cumplimiento.','p2':'Diferenciar el valor.','p3':'Alinear el desempeño.',
       'cta.talk':'Hablemos','cta.see':'Ver mi enfoque','hero.scroll':'Desliza','hero.band':'Conectando la precisión técnica con resultados comerciales estratégicos.',
-      'pr.eye':'Perfil','pr.title':'Entre la ingeniería y el cierre.',
+      'pr.eye':'Perfil','pr.title':'Entre la ingeniería y el cliente.',
       'pr.body':'Traduzco requisitos técnicos en decisiones de compra. Trabajo entre ingeniería, clientes y dirección comercial para que cada propuesta *cumpla* la norma, muestre su *valor* con claridad y se sostenga en *resultados* medibles.',
-      'f.role.k':'Rol','f.role.v':'Ventas técnicas e ingeniería comercial','f.lang.k':'Idiomas','f.lang.v':'Español · Inglés, nivel profesional',
+      'f.role.k':'Rol','f.role.v':'Ventas técnicas, gestión de cuentas y atención al cliente B2B','f.lang.k':'Idiomas','f.lang.v':'Español · Inglés, nivel profesional',
       'f.focus.k':'Enfoque','f.focus.v':'Cumplimiento, valor y desempeño','f.mkt.k':'Mercado','f.mkt.v':'B2B técnico e industrial',
-      chips:['Especificación técnica','Cumplimiento normativo','Propuestas de valor','Negociación','Preventa','CRM y pronóstico','Presentaciones ejecutivas'],
+      chips:['Propuestas técnico-comerciales','Precios y P&L','Contratos y licitaciones','Traspaso de ventas a operaciones','SAP C4C','Costo total y payback','Atención al cliente B2B','Gestión de cuentas'],
       'v.eye':'Cómo genero valor','v.title':'Cuatro frentes donde impulso el negocio.',
       'v.lead':'Del primer contacto con el cliente hasta el crecimiento de la cuenta, estas son las áreas donde mi perfil técnico y comercial aporta resultados.',
       'v1.t':'Experiencia y operaciones del cliente','v1.d':'Soy el punto de contacto con el que el cliente puede contar: coordino sus pedidos de principio a fin, comunico con claridad y resuelvo incidencias junto con ingeniería, logística y calidad.',
       'v2.t':'Operaciones comerciales y contratos','v2.d':'Doy orden y rigor al lado comercial: preparo cotizaciones y propuestas, reviso condiciones contractuales y analizo precios y márgenes para que cada acuerdo sea competitivo y rentable.',
       'v3.t':'Ventas técnicas y soluciones','v3.d':'Convierto la necesidad técnica del cliente en una solución concreta: desarrollo la propuesta técnica, la presento a cada decisor y doy soporte en la aplicación.',
-      'v4.t':'Apoyo al desarrollo de negocio','v4.d':'Ayudo a abrir camino para crecer: identifico oportunidades, analizo el mercado y mantengo una relación activa con los clientes para impulsar el crecimiento del territorio.',
+      'v4.t':'Gestión de cuentas y desarrollo de negocio','v4.d':'Hago crecer las cuentas desde las necesidades del cliente: al atenderlo de cerca, identifico lo que aún no ha resuelto y lo convierto en nuevas oportunidades, soluciones de otras líneas de producto y renovaciones de contrato.',
       vtags:[['Atención al cliente','Coordinación de pedidos','Comunicación con clientes','Resolución de incidencias','Colaboración multifuncional'],
              ['Precios','Contratos','Gestión de propuestas','Análisis comercial','Operaciones de ventas'],
              ['Propuestas técnicas','Desarrollo de soluciones','Presentaciones a clientes','Soporte de aplicaciones'],
-             ['Identificación de oportunidades','Análisis de mercado','Relación con clientes','Crecimiento del territorio']],
+             ['Necesidades del cliente','Planes de cuenta','Oportunidades entre líneas de producto','Renovaciones de contrato','Pronóstico y pipeline']],
       'ap.eye':'Enfoque','ap.title':'Tres pilares, un mismo resultado.','ap.lead':'Cada oportunidad pasa por los mismos tres filtros antes de llegar al cliente.',
       'c1.t':'Asegurar el cumplimiento','c1.d':'Reviso especificaciones, normas y certificaciones antes de cotizar, para que la propuesta pase la auditoría del cliente a la primera.','c1.a':'Normas','c1.b':'Especificaciones','c1.c':'Documentación',
       'c2.t':'Diferenciar el valor','c2.d':'Convierto datos de desempeño en argumentos de negocio: costo total, riesgo evitado y retorno, en el lenguaje de cada decisor.',
@@ -575,32 +647,32 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       'j1.w':'20XX – Actual','j1.o':'Empresa · Ciudad','j1.t':'Ingeniera Comercial · Ventas Técnicas','j1.a':'Gestión de cuentas industriales clave desde el diagnóstico hasta la postventa.','j1.b':'Propuestas técnico‑económicas alineadas a normas y requisitos del cliente.','j1.c':'Coordinación entre ingeniería, operación y dirección comercial.',
       'j2.w':'20XX – 20XX','j2.o':'Empresa · Ciudad','j2.t':'Ingeniera de Aplicaciones · Preventa','j2.a':'Selección y dimensionamiento de soluciones según la aplicación del cliente.','j2.b':'Demostraciones técnicas y presentaciones ejecutivas en inglés y español.',
       'j3.w':'20XX – 20XX','j3.o':'Universidad · Ciudad','j3.t':'Formación en Ingeniería','j3.a':'Base técnica para leer especificaciones, normas y datos de desempeño.',
-      skills:['Ventas técnicas B2B','Ingeniería de aplicaciones','Cumplimiento normativo','Costo total de propiedad','Gestión de cuentas clave','Preventa','Negociación','Bilingüe EN/ES'],
-      'ct.eye':'Contacto','ct.t1':'¿Diseñamos tu siguiente','ct.t2':'resultado comercial?',
-      'ct.lead':'Disponible para roles de ventas técnicas, ingeniería comercial y gestión de cuentas en mercados de habla inglesa e hispana.',
+      skills:['Ventas técnicas B2B','Atención al cliente B2B','Gestión de cuentas','Precios y P&L','Contratos y licitaciones','Costo total de propiedad','Traspaso de ventas a operaciones','SAP C4C','Bilingüe EN/ES'],
+      'ct.eye':'Contacto','ct.t1':'','ct.t2':'Hablemos.',
+      'ct.lead':'Abierta a roles de atención y experiencia del cliente, gestión de cuentas, ventas técnicas y operaciones comerciales, en español e inglés.',
       'ct.copy':'Copiar correo','copied':'Correo copiado.','copyFail':'No se pudo copiar. El correo quedó seleccionado: cópialo con Ctrl+C.',
       'ft':'Desempeño comercial, con ingeniería.'
     },
     en: {
       'nav.profile':'Profile','nav.value':'Value','nav.approach':'Approach','nav.process':'Process','nav.exp':'Experience','nav.contact':'Contact',
-      'hero.eyebrow':'Commercial engineering · B2B technical sales','hero.role':'Technical Sales & Commercial Engineer','hero.bi':'Bilingual (EN/ES)',
+      'hero.eyebrow':'Technical sales · Commercial operations · B2B customer experience','hero.role':'Technical Sales & Commercial Engineer','hero.bi':'Bilingual (EN/ES)',
       'hero.tag':'Commercial performance, engineered.','p1':'Ensure compliance.','p2':'Differentiate value.','p3':'Align performance.',
       'cta.talk':"Let's talk",'cta.see':'See my approach','hero.scroll':'Scroll','hero.band':'Connecting technical precision with strategic commercial outcomes.',
-      'pr.eye':'Profile','pr.title':'Between engineering and the close.',
+      'pr.eye':'Profile','pr.title':'Between engineering and the customer.',
       'pr.body':'I translate technical requirements into buying decisions. I work between engineering, customers and commercial leadership so every proposal *meets* the standard, shows its *value* clearly and holds up in measurable *results*.',
-      'f.role.k':'Role','f.role.v':'Technical sales and commercial engineering','f.lang.k':'Languages','f.lang.v':'Spanish · English, professional level',
+      'f.role.k':'Role','f.role.v':'Technical sales, account management and B2B customer service','f.lang.k':'Languages','f.lang.v':'Spanish · English, professional level',
       'f.focus.k':'Focus','f.focus.v':'Compliance, value and performance','f.mkt.k':'Market','f.mkt.v':'Technical and industrial B2B',
-      chips:['Technical specification','Regulatory compliance','Value propositions','Negotiation','Pre-sales','CRM & forecasting','Executive presentations'],
+      chips:['Technical-commercial proposals','Pricing & P&L','Contracts & tenders','Sales-to-operations handover','SAP C4C','Total cost & payback','B2B customer service','Account management'],
       'v.eye':'How I create value','v.title':'Four areas where I move the business forward.',
       'v.lead':'From first customer contact to account growth, these are the areas where my technical and commercial background delivers results.',
       'v1.t':'Customer Experience & Customer Operations','v1.d':'I am the point of contact customers can rely on: I coordinate their orders end to end, communicate clearly and resolve issues together with engineering, logistics and quality.',
       'v2.t':'Commercial Operations & Contracts','v2.d':'I bring order and rigor to the commercial side: I prepare quotes and proposals, review contract terms and analyze pricing and margins so every deal is competitive and profitable.',
       'v3.t':'Technical Sales & Solutions','v3.d':"I turn the customer's technical need into a concrete solution: I develop the technical proposal, present it to each decision-maker and provide application support.",
-      'v4.t':'Business Development Support','v4.d':'I help open the way to growth: I identify opportunities, analyze the market and keep an active relationship with customers to support territory growth.',
+      'v4.t':'Account Management & Business Development','v4.d':"I grow accounts from the customer's needs: by serving them closely, I identify what they still haven't solved and turn it into new opportunities, solutions from other product lines, and contract renewals.",
       vtags:[['Customer support','Order coordination','Customer communication','Issue resolution','Cross-functional collaboration'],
              ['Pricing','Contracts','Proposal management','Commercial analysis','Sales operations'],
              ['Technical proposals','Solution development','Customer presentations','Application support'],
-             ['Opportunity identification','Market analysis','Customer engagement','Territory growth support']],
+             ['Customer needs','Account plans','Cross-product opportunities','Contract renewals','Forecast & pipeline']],
       'ap.eye':'Approach','ap.title':'Three pillars, one outcome.','ap.lead':'Every opportunity goes through the same three filters before it reaches the customer.',
       'c1.t':'Ensure compliance','c1.d':"I review specifications, standards and certifications before quoting, so the proposal passes the customer's audit the first time.",'c1.a':'Standards','c1.b':'Specifications','c1.c':'Documentation',
       'c2.t':'Differentiate value','c2.d':"I turn performance data into business arguments: total cost, risk avoided and return, in each decision-maker's language.",
@@ -615,14 +687,171 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       'j1.w':'20XX – Present','j1.o':'Company · City','j1.t':'Commercial Engineer · Technical Sales','j1.a':'Managed key industrial accounts from discovery through after-sales.','j1.b':'Built technical and commercial proposals aligned with standards and customer requirements.','j1.c':'Coordinated engineering, operations and commercial leadership.',
       'j2.w':'20XX – 20XX','j2.o':'Company · City','j2.t':'Applications Engineer · Pre-sales','j2.a':'Selected and sized solutions for each customer application.','j2.b':'Delivered technical demos and executive presentations in English and Spanish.',
       'j3.w':'20XX – 20XX','j3.o':'University · City','j3.t':'Engineering degree','j3.a':'Technical grounding to read specifications, standards and performance data.',
-      skills:['B2B technical sales','Applications engineering','Regulatory compliance','Total cost of ownership','Key account management','Pre-sales','Negotiation','Bilingual EN/ES'],
-      'ct.eye':'Contact','ct.t1':'Shall we engineer your next','ct.t2':'commercial result?',
-      'ct.lead':'Open to technical sales, commercial engineering and account management roles in English- and Spanish-speaking markets.',
+      skills:['B2B technical sales','B2B customer service','Account management','Pricing & P&L','Contracts & tenders','Total cost of ownership','Sales-to-operations handover','SAP C4C','Bilingual EN/ES'],
+      'ct.eye':'Contact','ct.t1':'','ct.t2':"Let's talk.",
+      'ct.lead':'Open to customer service and customer experience, account management, technical sales and commercial operations roles, in English and Spanish.',
       'ct.copy':'Copy email','copied':'Email copied.','copyFail':'Copy was blocked. The address is selected: press Ctrl+C.',
       'ft':'Commercial performance, engineered.'
     }
   };
-  let lang = 'es';
+
+  /* ---------- copy 2: new and updated text ---------- */
+  Object.assign(T.es, {
+    'nav.approach':'La portada','nav.proof':'Casos',
+    'hero.spine':'Hago confiable la ejecución comercial: de la primera cotización al pedido entregado.',
+    'hero.why':'¿Por qué estas tres líneas? →','cta.see':'Ver trayectoria',
+    'pr.body':'Mi trabajo es que cada pedido y propuesta *cumpla*, muestre su *valor* y se sostenga en *resultados* medibles. Para lograrlo, primero entiendo quiénes somos, a quién servimos y qué necesita; después defino objetivos y proceso. En servicios de petróleo y gas aprendí a hacerlo entre ingeniería, clientes, operaciones, planeación y dirección comercial.',
+    'f.mkt.k':'Mercado','f.mkt.v':'B2B industrial · experiencia en petróleo y gas','f.edu.k':'Formación','f.edu.v':'Ingeniería Industrial y de Sistemas · Tecnológico de Monterrey',
+    'v.title':'Cuatro áreas donde puedo aportar.',
+    'v.lead':'Un mismo perfil, cuatro puertas de entrada.',
+    'v.lk':'Responde a',
+    'v1.l':'Asegurar el cumplimiento','v2.l':'Asegurar el cumplimiento','v3.l':'Diferenciar el valor','v4.l':'Diferenciar el valor · Alinear el desempeño',
+    'ap.eye':'Detrás de la portada','ap.title':'Tres trabajos que me contratan para resolver.',
+    'ap.lead':'Antes de diseñar mi portada de LinkedIn, analicé los requisitos de una muestra de puestos comerciales y técnico-comerciales y busqué el trabajo que todos tienen en común. De ahí salieron cinco personas, definidas por necesidades y no por puesto. Elegí tres para la portada: cada línea responde a una de ellas.',
+    'ap.note':'Cumplir evita errores, diferenciar hace visible el valor y alinear evita sorpresas. Muchas tareas sirven a más de una: lo que cambia es el resultado que protegen.',
+    'k.for':'Para','k.need':'Su necesidad','k.bring':'Lo que aporto',
+    'c1.t':'Asegurar el cumplimiento','c1.f':'Quienes no pueden permitirse errores: el cliente, operaciones, calidad y contratos.','c1.n':'Ejecutar el ciclo comercial sin errores ni riesgos de cumplimiento: propuestas, órdenes, precios y entregables correctos, con documentación lista para auditoría.','c1.b':'En la propuesta, uso listas de verificación para que nada quede fuera. En la orden de trabajo, comunico con exactitud el programa o solicitud del cliente y verifico que los entregables cumplan el contrato.',
+    'v1.d':'Soy el punto de contacto con el que el cliente puede contar: comunico su programa de trabajo con exactitud, coordino sus pedidos de principio a fin y resuelvo incidencias junto con ingeniería, logística y calidad.',
+    'c2.t':'Diferenciar el valor','c2.f':'Quienes necesitan ganar: ventas, desarrollo de negocio y gerentes de cuenta.','c2.n':'Ganar más negocios, más rápido: propuestas ágiles y un valor que el cliente entienda a la primera.','c2.b':'Armo propuestas técnicas a la medida de cada aplicación y traduzco el desempeño en costo total y payback, incluso con las herramientas y supuestos del propio cliente.',
+    'c3.t':'Alinear el desempeño','c3.p':'Strategic-Orchestrators','c3.f':'Quienes necesitan previsibilidad: dirección comercial, ventas y operaciones.','c3.n':'Un desempeño comercial predecible y sin sorpresas: el margen protegido y los equipos trabajando con la misma información.','c3.b':'Desde la propuesta dejo claros el alcance, las responsabilidades y los entregables. Hago el traspaso (handover) a operaciones a nivel contrato y trabajo, y comparto la visibilidad del pipeline para que puedan planear.',
+    'm.eye':'Cómo llegué aquí','m.title':'Investigar antes de comunicar.',
+    'm.lead':'Mi portada no es un eslogan: es el resultado del mismo proceso que usaría para entender a los clientes de una empresa.',
+    'm1.d':'Contexto del sector energético: regulación, tecnología y mercado.',
+    'm2.d':'El trabajo común a todos los puestos: adquirir, hacer crecer y retener clientes rentables con una ejecución comercial confiable.',
+    'm3.t':'Cinco personas','m3.d':'Agrupé los requisitos de una muestra de puestos comerciales en cinco perfiles según sus necesidades, no según su cargo.',
+    'm4.t':'Priorización','m4.d':'Elegí tres: las que combinan necesidades relevantes con lo que mi experiencia ya resuelve. Es una hipótesis que sigo validando.',
+    'm5.t':'Mensaje','m5.d':'Una línea por persona, en su propio lenguaje: la portada.',
+    'pf.eye':'Casos','pf.title':'Lo que hice en petróleo y gas, y cómo se traduce.',
+    'pf.note':'Plantilla: reemplaza cada caso con un ejemplo real tuyo (situación, acción y un resultado con número).',
+    pfk:{s:'Situación',a:'Acción',r:'Resultado',m:'En manufactura (ejemplo)'},
+    cases:[
+      {l:'Asegurar el cumplimiento',t:'[Ej.: Programa de trabajo comunicado, ejecutado y entregado según contrato]',s:'[Qué pasaba y por qué importaba]',a:'[Qué hiciste tú, en concreto]',r:'[Número: errores o retrabajo evitados, reclamos reducidos, auditorías sin hallazgos…]',m:'Programa de trabajo y diseño aprobado → órdenes del cliente, especificaciones y entregables según contrato.'},
+      {l:'Diferenciar el valor',t:'[Título del caso]',s:'[Qué pasaba y por qué importaba]',a:'[Qué hiciste tú, en concreto]',r:'[Número: tasa de cierre, ciclo de propuesta más corto, ingreso…]',m:'Propuestas técnicas → cotizaciones claras y argumentos de valor para clientes industriales.'},
+      {l:'Alinear el desempeño',t:'[Título del caso]',s:'[Qué pasaba y por qué importaba]',a:'[Qué hiciste tú, en concreto]',r:'[Número: margen protegido, precisión del pronóstico, traspasos a operaciones sin sorpresas…]',m:'Propuesta clara, traspaso a operaciones y visibilidad del pipeline → planeación de producción y pedidos sin sorpresas.'}
+    ]
+  });
+  Object.assign(T.en, {
+    'nav.approach':'The banner','nav.proof':'Proof',
+    'hero.spine':'I make commercial execution reliable, from the first quote to the delivered order.',
+    'hero.why':'Why these three lines? →','cta.see':'See experience',
+    'pr.body':'My job is making every order and proposal *meet* the standard, show its *value* clearly and hold up in measurable *results*. To get there, I first understand who we are, who we serve and what they need; then I set objectives and process. Oil and gas services taught me to do it between engineering, customers, operations, planning and commercial leadership.',
+    'f.mkt.k':'Market','f.mkt.v':'Industrial B2B · oil and gas background','f.edu.k':'Education','f.edu.v':'B.S. Industrial Engineering, minor in Systems Engineering · Tecnológico de Monterrey',
+    'v.title':'Four areas where I can contribute.',
+    'v.lead':'One profile, four ways in.',
+    'v.lk':'Answers',
+    'v1.l':'Ensure compliance','v2.l':'Ensure compliance','v3.l':'Differentiate value','v4.l':'Differentiate value · Align performance',
+    'ap.eye':'Behind the banner','ap.title':"Three jobs I'm hired to get done.",
+    'ap.lead':'Before designing my LinkedIn cover, I analyzed the requirements of a sample of commercial and technical-sales roles and looked for the job they all share. That produced five personas, defined by needs rather than job titles. I chose three for the banner: each line answers one of them.',
+    'ap.note':'Compliance prevents errors, differentiation makes value visible, and alignment prevents surprises. Many tasks serve more than one: what changes is the outcome they protect.',
+    'k.for':'For','k.need':'Their need','k.bring':'What I bring',
+    'c1.t':'Ensure compliance','c1.f':"Those who can't afford errors: the customer, operations, quality and contracts.",'c1.n':'Running the commercial cycle without errors or compliance risks: correct proposals, orders, pricing and deliverables, with audit-ready documentation.','c1.b':"At the proposal stage, I use checklists so nothing is missed. At the work-order stage, I communicate the customer's program or request precisely and verify that deliverables meet the contract.",
+    'v1.d':"I am the point of contact customers can rely on: I communicate their work program precisely, coordinate their orders end to end, and resolve issues together with engineering, logistics and quality.",
+    'c2.t':'Differentiate value','c2.f':'Those who need to win: sales, business development and account managers.','c2.n':'Winning more deals, faster: agile proposals and value the customer gets the first time.','c2.b':"I build technical proposals tailored to each application and translate performance into total cost and payback, even using the customer's own tools and assumptions.",
+    'c3.t':'Align performance','c3.p':'Strategic-Orchestrators','c3.f':'Those who need predictability: commercial leadership, sales and operations.','c3.n':'Predictable commercial performance with no surprises: margin protected and teams working from the same information.','c3.b':'From the proposal I make scope, responsibilities and deliverables clear. I hand over to operations at contract and work level, and share pipeline visibility so they can plan.',
+    'm.eye':'How I got here','m.title':'Research before messaging.',
+    'm.lead':"My banner isn't a slogan. It's the output of the same process I'd use to understand a company's customers.",
+    'm1.d':'Energy-sector context: regulation, technology and market.',
+    'm2.d':'The job every role shares: acquire, grow and retain profitable customers through reliable commercial execution.',
+    'm3.t':'Five personas','m3.d':'I grouped the requirements of a sample of commercial roles into five profiles by need, not by job title.',
+    'm4.t':'Prioritization','m4.d':"I chose three: where relevant needs meet what my experience already solves. It's a hypothesis I keep testing.",
+    'm5.t':'Message','m5.d':'One line per persona, in their own language: the banner.',
+    'pf.eye':'Proof','pf.title':'What I did in oil and gas, and how it transfers.',
+    'pf.note':'Template: replace each case with a real example of yours (situation, action and a result with a number).',
+    pfk:{s:'Situation',a:'Action',r:'Result',m:'In manufacturing (example)'},
+    cases:[
+      {l:'Ensure compliance',t:'[e.g. Work program communicated, executed and delivered per contract]',s:'[What was happening and why it mattered]',a:'[What you specifically did]',r:'[Number: errors or rework avoided, fewer complaints, clean audits…]',m:'Work program and approved design → customer orders, specifications and deliverables per contract.'},
+      {l:'Differentiate value',t:'[Case title]',s:'[What was happening and why it mattered]',a:'[What you specifically did]',r:'[Number: win rate, shorter proposal cycle, revenue…]',m:'Technical proposals → clear quotes and value arguments for industrial customers.'},
+      {l:'Align performance',t:'[Case title]',s:'[What was happening and why it mattered]',a:'[What you specifically did]',r:'[Number: margin protected, forecast accuracy, handovers without surprises…]',m:'Clear proposals, handover to operations and pipeline visibility → production planning and orders without surprises.'}
+    ]
+  });
+
+  /* ---------- copy 2: experience (from LinkedIn profile) ---------- */
+  const L = {es:{c:'Asegurar el cumplimiento',v:'Diferenciar el valor',a:'Alinear el desempeño'}, en:{c:'Ensure compliance',v:'Differentiate value',a:'Align performance'}};
+  Object.assign(T.es, {
+    'ex.eye':'Trayectoria','ex.title':'18+ años: del campo al lado comercial.',
+    'ex.lead':'Hasta ahora, mi experiencia ha sido en SLB, en servicios de estimulación de pozos para petróleo y gas. Cada cambio de rol me acercó más al cliente y a las decisiones comerciales. Las etiquetas muestran cuál de los tres trabajos demuestra cada etapa.',
+    'ex.edu':'Formación y desarrollo',
+    jobs:[
+      {w:'2023 – 2025',o:'SLB · Anchorage, Alaska, EE. UU.',t:'Sales Engineer',s:'Intervención y estimulación de pozos',k:['v','a'],b:[
+        'Gestioné cuentas de clientes en North Slope: convertí sus requisitos en cotizaciones y propuestas con recomendación de precios, junto con operaciones, comercial y legal.',
+        'Al llegar, implementé un nuevo esquema de contrato y una revisión rigurosa de cotizaciones.',
+        'Mantuve planes de cuenta y pronósticos de actividad en SAP C4C para dar visibilidad del pipeline y apoyar la planeación.']},
+      {w:'2022 – 2023',o:'SLB · Houston, Texas, EE. UU.',t:'Product Line Commercial Engineer',s:'Hemisferio Occidental',k:['c','a'],b:[
+        'Definí estrategias de precio competitivas y alineadas al margen para licitaciones, con base en históricos y referencias de mercado.',
+        'Revisé términos de contrato con legal para reducir el riesgo comercial.',
+        'Validé el P&L con los Sales Engineers antes de enviar propuestas y apoyé el traspaso de contratos a operaciones.']},
+      {w:'2019 – 2022',o:'SLB · Reynosa, México',t:'Customer Engagement Coordinator',s:'Norte y Este de México',k:['c','a'],b:[
+        'Fui el punto de contacto principal del cliente. Desde 2020, con la pandemia, sostuve la relación y la coordinación de forma remota.',
+        'Aseguré el cumplimiento del contrato y de los KPI: coordiné al cliente con los equipos de ejecución, resolví desviaciones y alineé expectativas.',
+        'Analicé el P&L de contratos activos y nuevas propuestas para apoyar precios, estrategia de licitación y renovaciones.']},
+      {w:'2012 – 2019',o:'SLB · Reynosa, México',t:'Technical Sales Engineer',s:'Incluye Contract Superintendent, contrato PEMEX (2013 – 2015)',k:['v','c'],b:[
+        'Preparé la parte técnica de cuatro licitaciones mayores de PEMEX en Poza Rica: las cuatro calificaron, y el contrato ganado me llevó a ser Contract Superintendent.',
+        'Armé propuestas técnico-comerciales completas: diseño, precios, P&L, riesgos y requisitos operativos.',
+        'Capacité a ingenieros junior en análisis y entregables técnicos.']},
+      {w:'2006 – 2012',o:'SLB · Conway, Arkansas, EE. UU. y Reynosa, México',t:'Field Engineer',s:'De Trainee a General Field Engineer',k:['c'],b:[
+        'Ejecuté y evalué operaciones en un distrito de alto volumen (70 a 120 trabajos al mes), con control de calidad antes, durante y después de cada trabajo.',
+        'Como enlace con el cliente en campo, verifiqué que los entregables cumplieran lo esperado y que la documentación permitiera facturar a tiempo.',
+        'Apoyé la implementación de nueva tecnología y los procedimientos de los primeros pozos de shale Eagle Ford en México.']}
+    ],
+    edu:[
+      ['Ingeniería Industrial y de Sistemas','Tecnológico de Monterrey · Mención honorífica'],
+      ['Strategic Sales Leader Certificate','Tecnológico de Monterrey · 2026 · 120 horas'],
+      ['Preparación CCMA (Commercial and Contract Management Associate)','NCMA · 2026'],
+      ['Publicación técnica (coautora)','SPE Annual Technical Conference · 2014']
+    ]
+  });
+  Object.assign(T.en, {
+    'ex.eye':'Experience','ex.title':"18+ years: from field operations to the commercial side.",
+    'ex.lead':'So far, my experience has been at SLB, in well stimulation services for oil and gas. Every role change brought me closer to the customer and to commercial decisions. The tags show which of the three jobs each stage demonstrates.',
+    'ex.edu':'Education and development',
+    jobs:[
+      {w:'2023 – 2025',o:'SLB · Anchorage, Alaska, USA',t:'Sales Engineer',s:'Well intervention and stimulation',k:['v','a'],b:[
+        'Managed North Slope customer accounts, turning their requirements into quotations and proposals with pricing recommendations, together with operations, commercial and legal.',
+        'On arrival, implemented a new contract framework and rigorous quotation review.',
+        'Kept account plans and activity forecasts in SAP C4C to give pipeline visibility and support planning.']},
+      {w:'2022 – 2023',o:'SLB · Houston, Texas, USA',t:'Product Line Commercial Engineer',s:'Western Hemisphere',k:['c','a'],b:[
+        'Built competitive, margin-aligned pricing strategies for tenders, based on historical pricing and market benchmarks.',
+        'Reviewed contract terms with legal to reduce commercial risk.',
+        'Validated P&L with Sales Engineers before proposals went out, and supported contract handovers to operations.']},
+      {w:'2019 – 2022',o:'SLB · Reynosa, Mexico',t:'Customer Engagement Coordinator',s:'Mexico North and East',k:['c','a'],b:[
+        "Primary customer point of contact. From 2020, with the pandemic, kept the relationship and coordination running remotely.",
+        'Ensured contract and KPI compliance: coordinated the customer with execution teams, resolved deviations and aligned expectations.',
+        'Analyzed P&L for active contracts and new proposals to support pricing, bid strategy and renewals.']},
+      {w:'2012 – 2019',o:'SLB · Reynosa, Mexico',t:'Technical Sales Engineer',s:'Includes Contract Superintendent, PEMEX contract (2013 – 2015)',k:['v','c'],b:[
+        'Prepared the technical side of four major PEMEX tenders in Poza Rica: all four qualified, and the awarded contract led to my appointment as Contract Superintendent.',
+        "Built complete technical-commercial proposals: design, pricing, P&L, risk and operational requirements.",
+        'Coached junior engineers on analysis and technical deliverables.']},
+      {w:'2006 – 2012',o:'SLB · Conway, Arkansas, USA and Reynosa, Mexico',t:'Field Engineer',s:'From Trainee to General Field Engineer',k:['c'],b:[
+        'Executed and evaluated operations in a high-volume district (70 to 120 jobs a month), with quality control before, during and after every job.',
+        'As the on-site customer liaison, verified that deliverables met expectations and that documentation allowed timely invoicing.',
+        'Supported new technology rollouts and the procedures for the first Eagle Ford shale wells in Mexico.']}
+    ],
+    edu:[
+      ['B.S. Industrial Engineering, minor in Systems Engineering','Tecnológico de Monterrey · Graduated with honors'],
+      ['Strategic Sales Leader Certificate','Tecnológico de Monterrey · 2026 · 120 hours'],
+      ['CCMA exam prep (Commercial and Contract Management Associate)','NCMA · 2026'],
+      ['Technical publication (co-author)','SPE Annual Technical Conference · 2014']
+    ]
+  });
+
+  Object.assign(T.es, {
+    'pr.m':{lead:'Mi trabajo es que cada pedido y propuesta *cumpla*, muestre su *valor* y se sostenga en *resultados* medibles.',
+      how:'Cómo lo logro',
+      steps:['Entiendo quiénes somos, a quién servimos y qué necesita.','Defino objetivos y proceso.','Doy seguimiento a la ejecución y la entrega.','Verifico el cumplimiento e identifico áreas de mejora.'],
+      close:'Lo aprendí en servicios de petróleo y gas, trabajando entre ingeniería, clientes, operaciones, planeación y dirección comercial.'},
+    'ct.li':'Escríbeme en LinkedIn','ct.f.title':'O déjame un mensaje aquí','ct.f.name':'Nombre','ct.f.email':'Correo','ct.f.co':'Empresa (opcional)','ct.f.msg':'Mensaje','ct.f.send':'Enviar mensaje',
+    'ct.f.ok':'Gracias, tu mensaje llegó. Te responderé pronto.','ct.f.err':'No se pudo enviar. Por favor escríbeme en LinkedIn.','ct.f.local':'Vista local: el formulario todavía no está conectado a un servicio de envío.'
+  });
+  Object.assign(T.en, {
+    'pr.m':{lead:'My job is making every order and proposal *meet* the standard, show its *value* clearly and hold up in measurable *results*.',
+      how:'How I get there',
+      steps:['I understand who we are, who we serve and what they need.','I set objectives and process.','I follow up on execution and delivery.','I verify compliance and identify areas for improvement.'],
+      close:'I learned it in oil and gas services, working between engineering, customers, operations, planning and commercial leadership.'},
+    'ct.li':'Message me on LinkedIn','ct.f.title':'Or leave me a message here','ct.f.name':'Name','ct.f.email':'Email','ct.f.co':'Company (optional)','ct.f.msg':'Message','ct.f.send':'Send message',
+    'ct.f.ok':"Thanks, your message arrived. I'll get back to you soon.",'ct.f.err':'It could not be sent. Please message me on LinkedIn.','ct.f.local':'Local preview: the form is not connected to a sending service yet.'
+  });
+
+  let lang = (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
   try { const s = localStorage.getItem('la-lang'); if (s && T[s]) lang = s; } catch(e){}
 
   /* ---------- text splitting ---------- */
@@ -649,18 +878,34 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
     });
   }
 
+  /* profile manifesto: result statement, then the method as steps, then where it was learned */
+  function buildManifesto(el, m){
+    el.textContent = '';
+    const part = (tag, cls, text) => { const n = document.createElement(tag); n.className = cls; splitWords(n, text); return n; };
+    el.appendChild(part('p', 'm-lead', m.lead));
+    el.appendChild(part('p', 'm-how', m.how));
+    const ol = document.createElement('ol'); ol.className = 'm-steps';
+    m.steps.forEach(s => { const li = document.createElement('li'); li.appendChild(part('span', '', s)); ol.appendChild(li); });
+    el.appendChild(ol);
+    el.appendChild(part('p', 'm-close', m.close));
+  }
+
   function applyLang(l){
     lang = l; const d = T[l];
     document.documentElement.lang = l;
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const v = d[el.dataset.i18n]; if (v == null) return;
-      if (el.id === 'manifesto') splitWords(el, v);
+      if (el.id === 'manifesto') buildManifesto(el, d['pr.m']);
       else if (el.classList.contains('split')) { splitChars(el, v); }
       else el.textContent = v;
     });
     document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
     document.getElementById('chips').innerHTML = d.chips.map(c => `<span class="chip">${c}</span>`).join('');
     document.querySelectorAll('[data-vtags]').forEach(el => { el.innerHTML = d.vtags[+el.dataset.vtags].map(t => `<span>${t}</span>`).join(''); });
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    document.getElementById('cases').innerHTML = d.cases.map(c => `<article class="case r3d"><p class="line">${esc(c.l)}</p><h3>${esc(c.t)}</h3><dl><div><dt>${d.pfk.s}</dt><dd>${esc(c.s)}</dd></div><div><dt>${d.pfk.a}</dt><dd>${esc(c.a)}</dd></div><div><dt>${d.pfk.r}</dt><dd>${esc(c.r)}</dd></div></dl><dl class="mfg"><div><dt>${d.pfk.m}</dt><dd>${esc(c.m)}</dd></div></dl></article>`).join('');
+    document.getElementById('timeline').innerHTML = '<span class="fill" aria-hidden="true"></span>' + d.jobs.map(j => `<article class="job r3d"><div><p class="when">${esc(j.w)}</p><p class="org">${esc(j.o)}</p><p class="jtags">${j.k.map(k => `<span>${L[l][k]}</span>`).join('')}</p></div><div><h3>${esc(j.t)}</h3><p class="jsub">${esc(j.s)}</p><ul>${j.b.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></article>`).join('');
+    document.getElementById('edu').innerHTML = d.edu.map(e => `<div class="edu-item"><b>${esc(e[0])}</b><span>${esc(e[1])}</span></div>`).join('');
     const half = Math.ceil(d.skills.length/2);
     const fill = (id, arr) => { document.getElementById(id).innerHTML = [...arr, ...arr, ...arr, ...arr].map(s => `<span>${s}</span>`).join(''); };
     fill('row1', d.skills.slice(0, half).concat(d.skills.slice(half)));
@@ -711,8 +956,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
   const nav = document.querySelector('.nav'), bar = document.querySelector('.progress');
   const ring = document.getElementById('ring'), cards = [...ring.children], stage = ring.parentElement;
   const apSec = document.getElementById('enfoque'), apSteps = [...document.querySelectorAll('#apSteps li')];
-  const psSec = document.getElementById('proceso'), track = document.getElementById('track'), steps = [...track.children], cnt = document.getElementById('cnt');
-  const r3d = [...document.querySelectorAll('.r3d')];
+  let r3d = [...document.querySelectorAll('.r3d')];
   const tl = document.getElementById('timeline');
   const navLinks = [...document.querySelectorAll('.links a')];
   const secs = navLinks.map(a => document.querySelector(a.getAttribute('href')));
@@ -724,10 +968,7 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
     ring.style.setProperty('--cw', cw + 'px');
     R = cw * 0.62;
     cards.forEach((c,i) => c.dataset.base = i*120);
-    if (!RM){
-      trackMax = Math.max(0, track.scrollWidth - innerWidth);
-      psSec.style.height = (innerHeight + trackMax * 1.1) + 'px';
-    }
+    r3d = [...document.querySelectorAll('.r3d')];
   }
 
   function tick(){
@@ -787,19 +1028,6 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
       c.style.pointerEvents = face > .8 ? 'auto' : 'none';
     });
     apSteps.forEach((s,i) => s.classList.toggle('on', i === act));
-
-    // horizontal track
-    const pr = psSec.getBoundingClientRect();
-    const pp = clamp(-pr.top / (pr.height - vh));
-    track.style.transform = `translate3d(${-pp*trackMax}px,0,0)`;
-    const mid = innerWidth/2; let best = 0, bd = 1e9;
-    steps.forEach((s,i) => {
-      const b = s.getBoundingClientRect(); const c = b.left + b.width/2 + (parseFloat(s.dataset.tx)||0);
-      const off = clamp((c - mid) / innerWidth, -1, 1);
-      if (Math.abs(c-mid) < bd){ bd = Math.abs(c-mid); best = i; }
-      s.style.transform = `rotateY(${off*-28}deg) translateZ(${-Math.abs(off)*120}px)`;
-    });
-    cnt.textContent = String(best+1).padStart(2,'0');
   }
 
   let ticking = false;
@@ -824,25 +1052,35 @@ html.rm .track{flex-wrap:wrap;padding-right:var(--gutR)}
 
   // card tilt on hover (process + jobs)
   if (!RM && matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.job').forEach(el => {
-      el.addEventListener('pointermove', e => {
-        const r = el.getBoundingClientRect(); const x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
-        el.style.boxShadow = `${-x*30}px ${-y*30+20}px 60px -30px rgba(0,0,0,.6)`;
-        el.style.borderColor = 'rgba(44,166,164,.45)';
-      });
-      el.addEventListener('pointerleave', () => { el.style.boxShadow=''; el.style.borderColor=''; });
+    const tlEl = document.getElementById('timeline');
+    tlEl.addEventListener('pointermove', e => {
+      const el = e.target.closest('.job'); if (!el) return;
+      const r = el.getBoundingClientRect(); const x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
+      tlEl.querySelectorAll('.job').forEach(j => { if (j !== el){ j.style.boxShadow=''; j.style.borderColor=''; } });
+      el.style.boxShadow = `${-x*30}px ${-y*30+20}px 60px -30px rgba(0,0,0,.6)`;
+      el.style.borderColor = 'rgba(44,166,164,.45)';
     });
+    tlEl.addEventListener('pointerleave', () => tlEl.querySelectorAll('.job').forEach(j => { j.style.boxShadow=''; j.style.borderColor=''; }));
   }
 
   /* ---------- controls ---------- */
   document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang); }));
-  const toast = document.getElementById('toast'), email = document.getElementById('email');
-  document.getElementById('copy').addEventListener('click', () => {
-    const txt = email.textContent;
-    const sel = () => { const r = document.createRange(); r.selectNodeContents(email); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  /* contact form: messages go to your email through a form service, your address never appears on the page.
+     Paste the service's form URL here (e.g. https://formspree.io/f/xxxxxxx). While empty, the form only shows in local preview. */
+  const FORM_ENDPOINT = 'https://formspree.io/f/meagagdn';
+  const form = document.getElementById('cform'), toast = document.getElementById('toast');
+  if (FORM_ENDPOINT || !/^https?:$/.test(location.protocol)) form.hidden = false;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    if (!FORM_ENDPOINT){ toast.textContent = T[lang]['ct.f.local']; return; }
+    const btn = form.querySelector('button[type="submit"]'); btn.disabled = true;
     try {
-      navigator.clipboard.writeText(txt).then(() => { toast.textContent = T[lang].copied; }, () => { sel(); toast.textContent = T[lang].copyFail; });
-    } catch(e){ sel(); toast.textContent = T[lang].copyFail; }
+      const r = await fetch(FORM_ENDPOINT, { method:'POST', body:new FormData(form), headers:{ Accept:'application/json' } });
+      if (!r.ok) throw new Error(r.status);
+      form.reset(); toast.textContent = T[lang]['ct.f.ok'];
+    } catch(err){ toast.textContent = T[lang]['ct.f.err']; }
+    btn.disabled = false;
   });
 
   /* ---------- boot ---------- */
